@@ -29,3 +29,7 @@ Nenhum item acima e causa demonstrada do BugCheck 0x1A. Fonte [EV-12](./registro
 ## Correcao focalizada executada pelo Desktop Commander em 23/09 (EV-21)
 
 O programa OPT-IN Intel Computing Improvement Program, associado aos avisos de encerramento inesperado `ESRV_SVC_QUEENCREEK` (SCM 7034), foi removido por seus desinstaladores oficiais MSI/bundle com retorno 0, apos criar ponto de restauracao. Verificacao independente: servicos e processos QUEENCREEK ausentes, driver `semav6msr64` removido, nenhum registro do aplicativo persistiu; drivers essenciais Intel RST e Intel MEI intactos. **Falha de servico historica tratada pela remocao do componente opcional**; nao confundir com correcao confirmada da tela azul nem de AppX/Store. [EV-21](./registro-de-evidencias.md).
+
+## Verificacao direta de 23/09 ~20h33 (EV-23)
+
+O Windows ja concluiu as atualizacoes anteriormente bloqueadas com `0x80073D02`: PC Manager **3.22.6.0** e Codex **26.917.6896.0** aparecem como `Status Ok`; PowerShell empacotado 7.6.6 tambem `Status Ok` e uma invocacao real de `pwsh` retornou `PWSH_OK`. **Nao executar re-registro em massa nem repetir instalacao das duas atualizacoes**. Store Push-To-Install `0x80072ee7` consta as 16h42, mas sem teste de endpoint/funcao atual nao escolher reset de DNS, proxy ou Registro. Servicos Queencreek removidos e nenhum novo 7034 apos as 20h20 naquela janela. [EV-23](./registro-de-evidencias.md).
