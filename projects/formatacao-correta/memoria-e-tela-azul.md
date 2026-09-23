@@ -19,3 +19,7 @@ Driver/dispositivo escrevendo memória indevida; caminho RAM/controlador de mem�
 ## Analise local posterior (23/09 ~17h30)
 
 Codex localizou minidumps de 05/09 e 23/09, alem de MEMORY.DMP de ~2,5 GB. WinDbgX esta instalado, mas a chamada pela CLI foi bloqueada e **nao houve nova depuracao**. WinDbg anterior havia detectado PTE corrompida, sem identificar quem modificou a memoria. Nenhum dispositivo presente apresentou codigo PnP de erro na consulta local. Fonte [EV-14](./registro-de-evidencias.md). Nao inferir que Event 37 contemporaneo causou a tela azul.
+
+## Nova descoberta nos dumps ORIGINAIS em 23/09
+
+O ZIP da coleta contém `090526-19265-01.dmp` e `092326-11734-01.dmp`. Os cabeçalhos brutos de AMBOS confirmam BugCheck 0x1A, Arg1 0x41792, Arg3 0x8000000000 e Arg4 0; Arg2 (endereço da PTE) é diferente. Portanto, não se trata de uma primeira ou única tela azul: a **mesma classe de corrupção de PTE voltou em 18 dias**. A saída WinDbg existente analisou 23/09; falta comparar a pilha/driver do dump de 05/09. Os cabeçalhos não revelam o autor. [Confronto global](./confronto-global-23-09.md) e [EV-15](./registro-de-evidencias.md).
