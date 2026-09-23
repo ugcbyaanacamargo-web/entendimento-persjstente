@@ -26,3 +26,12 @@ MemTest86 PASS relatado; teste diagnóstico Lenovo pendrive; SMART curto WD; tes
 3. Backup verificado e autorização expressa antes de excluir partições. Instalação final com mídia oficial e checagem de funcionamento, sem promessa de zero erros eternos.
 
 [STATE oficial](../../memory/STATE.yaml) · [Resultados 04/09](./testes-04-09-resultados.md) · [Origem e lacunas](./fontes-e-lacunas.md) · [Plano em 3 fases](./execucao-em-tres-fases.md).
+## Atualizacao apos coleta local do Codex em 23/09 (~17h30)
+
+- **Energia - ativo:** 19 Event 37 novos entre 11 e 23/09, quatro no dia 23; ultimo por volta de 16h40. O teste de 04/09 apenas nao reproduziu a falha naquela janela. Proxima decisao: correlacionar com uso na tomada e lentidao percebida; nao afirmar que causou BSOD.
+- **SATA - sem falha atual identificada:** controlador DEV_9D03 agora em servico iaStorAC, INF oem54, versao 17.8.1.1066. Nenhum WHEA/disk/storahci/iaStorA nos filtros de 14 dias. Nao alterar o driver por diferenca com 04/09.
+- **Tela azul - autor desconhecido:** minidumps de 05/09 e 23/09 e MEMORY.DMP ainda existem. Codex nao reanalisou o dump: invocacao WinDbgX bloqueada pela politica do ambiente. Analise previa WinDbg constatou PTE corrompida, sem identificar escritor.
+- **Windows - erros distintos:** AppX 0x80073D02 por aplicativos abertos; PowerShell AppModel 0x80070005; Store 0x80072ee7; Energy Server Service queencreek Event 7034. Nao agrupar em uma unica causa.
+- **Firmware de seguranca - ainda nao medido:** BIOS 4WCN47WW, Secure Boot ativo e TPM pronto nao determinam Manufacturing Mode, Flash Descriptor e BootGuard.
+
+Fonte: [EV-12 a EV-14](./registro-de-evidencias.md). Este novo achado prevalece sobre a suposicao anterior de que os Event 37 nao teriam retornado apos 04/09.
