@@ -16,3 +16,12 @@ DISM/SFC e reparos Store/AppX executados em setembro; Ferramenta de Captura/Scre
 Verificar somente a funcionalidade que ainda falha; corrigir arquivo/pacote/serviço/ACL preciso com backup e validação. **Nunca resetar todo HKLM/HKCU ou reatribuir permissões de TrustedInstaller em lote.**
 
 [Correlações](./correlacoes-windows-ubuntu.md) · [Plano](./plano-corretivo.md) · [Linha do tempo](./linha-do-tempo.md).
+## Recorrencia observada por Codex local, 23/09 ~17h30
+
+- AppX 0x80073D02 (Codex/PC Manager, 23/09): erro especifico de pacote em uso; evento 419 indicou aplicativo aberto. Para essa instalacao, fechar o aplicativo indicado e tentar a atualizacao focalizada. Referencia Microsoft: https://learn.microsoft.com/en-us/windows/win32/appxpkg/troubleshooting.
+- PowerShell empacotado: AppModel-Runtime 208/212, 0x80070005; falha de ativacao real em 23/09, sem prova de ACL geral danificada.
+- Store: Push-To-Install 6003, 0x80072ee7, falha de comunicacao sem causa de rede determinada.
+- Energy Server Service queencreek: 7034 em 21 e 23/09; servico estava executando na consulta posterior. uhssvc 7000 em 11/09 (arquivo nao encontrado), atualmente parado/desabilitado.
+- Eventos Update de 01/01/2027 tem horario inconsistente, nao classificar como falha recente: auditoria anterior ja associara saltos de data a Lenovo Diagnostics/RTC test, mas este conjunto novo nao foi ligado individualmente ao teste.
+
+Nenhum item acima e causa demonstrada do BugCheck 0x1A. Fonte [EV-12](./registro-de-evidencias.md).
