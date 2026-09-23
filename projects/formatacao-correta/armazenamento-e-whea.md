@@ -7,8 +7,9 @@
 - Isso relaciona os **registros** à cadeia de armazenamento, mas NÃO identifica SSD fisicamente defeituoso nem prova que os três eventos causaram os erros da Store/BSOD de setembro.
 - Controlador Intel SATA AHCI hardware ID terminado em `DEV_9D03`. Durante a coleta de 29/08 Intel RST 15.9.1.1018 (`iaStorA`) havia sido instalado/cadastrado, `storahci` ainda estava carregado e reinicialização pendente. **Estado transitório daquela data; pode ter mudado após os reboots.**
 - SMART curto concluiu sem erros; WD Dashboard exibiu firmware 42077100 como atualizado, conforme usuário.
+- **Evidência posterior: teste original SATA/PHY de 04/09**: controlador Intel 15.9.1.1018 iniciado, cinco ciclos de escrita/leitura 4 GiB, SMART examinado sem aumento e nenhum novo WHEA ou erro de armazenamento na janela do teste. [Resultados e limites](./testes-04-09-resultados.md).
 
 ## Conclusão operacional
-Não instalar Intel RST em cima do atual nem mudar modo SATA até saber qual driver controla o dispositivo HOJE e se novas falhas do mesmo tipo ocorreram; se não há falha atual, registrar histórico e não reabrir por inércia. O SSD não herda HKLM/HKCU por si próprio.
+O reboot do RST de 29/08 não é pendência atual: o controlador já consta iniciado com a versão Intel no teste posterior de 04/09. **Não reinstalar RST nem mudar modo SATA sem evidência nova.** Reabrir somente se surgirem WHEA ou sintomas atuais; o log 04/09 não prova ausência de defeito intermitente. O SSD não herda HKLM/HKCU por si próprio.
 
-[Projeto](./README.md) · [Plano](./plano-corretivo.md) · [Tela azul](./memoria-e-tela-azul.md) · [Fontes](./fontes-e-lacunas.md).
+[Funil](./triagem-causal-consolidada.md) · [Projeto](./README.md) · [Plano](./plano-corretivo.md) · [Tela azul](./memoria-e-tela-azul.md) · [Fontes](./fontes-e-lacunas.md).
