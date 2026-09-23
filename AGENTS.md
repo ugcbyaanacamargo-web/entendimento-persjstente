@@ -1,7 +1,7 @@
 # Instruções para agentes — entendimento persistente
 
 ## Entrada obrigatória no motor
-1. Leia **[memory/STATE.yaml](./memory/STATE.yaml)** como única fonte do estado atual e da próxima ação. NÃO copie estado operacional para outros Markdown.
+1. Leia **[memory/STATE.yaml](./memory/STATE.yaml)** como única fonte do estado atual e da próxima ação; depois o [funil de causas](./projects/formatacao-correta/triagem-causal-consolidada.md). NÃO copie estado operacional para outros Markdown.
 2. Leia [memory/ROUTER.yaml](./memory/ROUTER.yaml) e abra somente os documentos que atendem à pergunta, além do índice e [fontes/lacunas](./projects/formatacao-correta/fontes-e-lacunas.md). Roteamento é interpretação do agente, não script que se executa sozinho.
 3. Todo resultado novo autorizado segue [ingestão](./runbooks/ingestao-de-resultados.md): evidência → relação → decisão → atualização do STATE → commit → verificação do validador.
 4. Veja [SCHEMA.yaml](./memory/SCHEMA.yaml), [índice do motor](./memory/INDEX.md) e [validador](./tools/validate_memory.py). GitHub Actions valida arquivos, **não** faz reparo do Lenovo.
@@ -24,6 +24,8 @@
 - Atualize índice local e o [mapa central](./README.md). Guarde hipóteses em [scratchpad](./scratchpad/README.md).
 - **Não declarar que BSOD foi causado por CSME, SSD ou RAM apenas por coexistirem achados; distinguir correlação de causalidade.**
 - Diagnóstico aprovado não resolve outra falha; diagnóstico negativo não significa componente infalível.
+- **NÃO repetir:** MemTest86 final PASS relatado em 23/09, diagnóstico Lenovo, SMART curto WD, SATA/PHY de 04/09 e stress CPU de 04/09. Ler [resultados originais consolidados](./projects/formatacao-correta/testes-04-09-resultados.md); não pedir foto do resultado final do MemTest, usuário tem acesso pelo computador.
+- Os eventos RST pendente, WHEA e Event37 de **agosto** são históricos: os testes de 04/09 não reproduziram novos eventos durante suas janelas. Só reabrir se nova evidência.
 - Trabalhe com problema → ação focalizada → verificação do sintoma → encerramento ou encaminhamento, conforme [runbook](./runbooks/formatacao-correta-ciclo-de-correcao.md). Uma nova coleta só se alterar próxima ação; priorizar provas e decisões na [matriz](./projects/formatacao-correta/prioridades-e-provas.md).
 - O agente estrutura, decide, prepara e acompanha os comandos que o usuário executa; **não alegar acesso direto ao Lenovo, correção aplicada ou teste executado quando não houver ferramenta e resultado reais**.
 - Nunca sugerir como correção genérica: formatar novamente, Secure Erase, F9/CMOS, limpar TPM, trocar peça ou gravar BIOS/ME/Flash Descriptor sem procedimento e evidência específicos.
