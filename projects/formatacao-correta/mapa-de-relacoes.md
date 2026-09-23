@@ -10,6 +10,7 @@
 | Windows WHEA storahci/WD Green, agosto | atualizado-por | Teste SATA/PHY 04/09 com controlador Intel iniciado, sem novos eventos storage na janela | Não tratar reboot RST de agosto como pendente nem SSD como avariado por inferência |
 | Windows Event 37 e ACPI 13/15 de agosto | atualizado-por | Stress 04/09 sem novos eventos-alvo na janela | Não afirmar limitação constante da CPU; preservar eventos históricos |
 | BSOD 0x1A em 23/09 | não-determinado-por | MemTest86 final PASS conforme relato | RAM testada sem defeito detectado pelo exame; autor do bit corrompido segue desconhecido |
+| BSOD 0x1A/0x41792 em 05/09 | mesma-classe-de-falha | BSOD 0x1A/0x41792 em 23/09 | WinDbg local examinou ambos e MEMORY.DMP, bucket igual; nao concluiu mesmo escritor nem driver; no 05/09 pilha limitada por simbolos |
 | Ubuntu permissões/segurança | implementação-diferente | HKLM/HKCU Windows | Linux não utiliza Registro do Windows |
 
 **Ao inserir novo achado:** atualizar a aresta apropriada com fonte, data e limite; só marcar `corrigido-por` após executar e validar correção.
