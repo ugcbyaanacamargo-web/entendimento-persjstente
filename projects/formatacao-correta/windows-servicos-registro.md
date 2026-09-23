@@ -25,3 +25,7 @@ Verificar somente a funcionalidade que ainda falha; corrigir arquivo/pacote/serv
 - Eventos Update de 01/01/2027 tem horario inconsistente, nao classificar como falha recente: auditoria anterior ja associara saltos de data a Lenovo Diagnostics/RTC test, mas este conjunto novo nao foi ligado individualmente ao teste.
 
 Nenhum item acima e causa demonstrada do BugCheck 0x1A. Fonte [EV-12](./registro-de-evidencias.md).
+
+## Correcao focalizada executada pelo Desktop Commander em 23/09 (EV-21)
+
+O programa OPT-IN Intel Computing Improvement Program, associado aos avisos de encerramento inesperado `ESRV_SVC_QUEENCREEK` (SCM 7034), foi removido por seus desinstaladores oficiais MSI/bundle com retorno 0, apos criar ponto de restauracao. Verificacao independente: servicos e processos QUEENCREEK ausentes, driver `semav6msr64` removido, nenhum registro do aplicativo persistiu; drivers essenciais Intel RST e Intel MEI intactos. **Falha de servico historica tratada pela remocao do componente opcional**; nao confundir com correcao confirmada da tela azul nem de AppX/Store. [EV-21](./registro-de-evidencias.md).
