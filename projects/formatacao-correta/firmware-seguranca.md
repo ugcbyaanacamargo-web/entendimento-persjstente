@@ -11,6 +11,20 @@
 - **Secure Boot:** verifica componentes de boot conforme chaves UEFI; estava desativado na coleta Ubuntu, posteriormente usuário confirmou ativado. NÃO confundir com BootGuard.
 - **GDS Vulnerable** após microcode 0xd6 → 0xf6: mitigação de vulnerabilidade não reconhecida como ativa no Ubuntu; não explica automaticamente corrupção de memória ou permissões.
 
+## Referências oficiais consultadas em 23/09/2026
+
+- fwupd, especificação HSI: https://fwupd.github.io/libfwupdplugin/hsi.html — para `ME not in manufacturing mode` o valor favorável é **locked**, para `ME Flash Descriptor Override` é **locked**; BootGuard tem testes distintos para habilitação, ACM, OTP, Verified e Error Policy. A orientação pública para falhas desses atributos é procurar o **OEM**; isso não é um procedimento de regravação fornecido ao usuário.
+- Lenovo, BIOS para Type 80YH: https://pcsupport.lenovo.com/bs/en/products/laptops-and-netbooks/300-series/320-15ikb/80yh/downloads/ds121587 — lista 4WCN47WW, com alterações de segurança e correção de exibição de velocidade da CPU no SMBIOS. A página **não demonstra** que este pacote fecha Manufacturing Mode, altera BootGuard ou configura Flash Descriptor deste equipamento.
+- Lenovo, fim do suporte de desenvolvimento do modelo: https://pcsupport.lenovo.com/br/pt/products/laptops-and-netbooks/300-series/320-15ikb/80yh/downloads — não presumir futura atualização oficial, nem converter isso em autorização para usar firmware genérico.
+
+## O que está errado vs. como deveria estar
+
+| Medição relatada Ubuntu | Condição desejada documentada pelo fwupd | Próxima decisão |
+| --- | --- | --- |
+| CSME Manufacturing Mode: aberto | `locked` / modo de fabricação encerrado | Verificar exata saída original + procedimento/provisionamento OEM. Não é driver Windows. |
+| Flash Descriptor: permissões excessivas | Regiões protegidas e `override: locked`, de acordo com desenho da placa | Não aplicar script destravamento e não “fechar todos os bits” indiscriminadamente. |
+| BootGuard ACM/OTP/Verified/Policy inválidos | Estados validados para cada recurso que o hardware e a configuração de fabricação implementam | OEM confirma se a configuração era prevista e quais itens são de fato recuperáveis; não prometer alterar fuses. |
+
 ## Correção visada
 **Apurar o estado e a configuração de produção Lenovo para NM-B242 + BIOS 4WCN47WW e corrigir o provisionamento de firmware se houver procedimento autorizado.** Um laudo especializado precisa identificar exatamente o que pode ser reparado, o que é limitação da plataforma e o que depende de fusíveis irreversíveis. Não substituir o firmware por imagem genérica.
 
