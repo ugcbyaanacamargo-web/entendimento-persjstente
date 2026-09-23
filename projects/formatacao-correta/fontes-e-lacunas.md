@@ -1,16 +1,18 @@
 # Proveniência, conflitos e lacunas — não inventar continuidade
 
 ## Material usado para a consolidação em 2026-09-23
-- Conversa atual: resultados detalhados do Ubuntu 24.04 transcritos pelo usuário; confirmação de Linux **instalado como SO**, Lenovo Diagnostics pendrive sem erros, imagem do MemTest86 em andamento, histórico de Windows 11 → Ubuntu → Windows 10.
+- Conversa atual: resultados detalhados do Ubuntu 24.04 transcritos pelo usuário; confirmação de Linux **instalado como SO**, Lenovo Diagnostics pendrive sem erros, fotos parciais do MemTest86 e relato final PASS, histórico de Windows 11 → Ubuntu → Windows 10.
 - Arquivos do projeto acessíveis nesta sessão: `AUDITORIA_TOTAL_CONFRONTO_FINAL_LENOVO_80YH_20260829.md`, `CONFRONTO_MESTRE_REFERENCIA_X_ATUAL_LENOVO_80YH0000BR.md`, `Markdown(1).md colado` (WinDbg), `Texto colado.txt`, `Texto colado(20260913-021922).txt` e demais trechos pesquisados.
+- Em 23/09 também foram recuperados **dois arquivos originais posteriores à auditoria de agosto**: `TESTE_SATA_PHY_20260904_230509.txt` e `STRESS_EVENT37_80YH.txt`. Resultados resumidos em [testes 04/09](./testes-04-09-resultados.md); não publicar logs brutos com identificadores.
 - O relatório `AUDITORIA_TOTAL_CONFRONTO_FINAL...` é **análise de uma coleta**, não o ZIP bruto reenviado neste commit. Preservar a distinção entre o conteúdo citado por essa análise e decodificação própria independente.
 - Consulta ao GitHub: `README.md` e `AGENTS.md` originais verificados na branch main antes de escrever; repositório indicado como **público**.
 
 ## Não recuperado integralmente nesta sessão
 - ZIP bruto Windows 29/08 e todos os logs originários de Ubuntu 24.04 (`FWTS-RESULTS.log`, `CHIPSEC-RESULTS.log`, JSON CHIPSEC): transcrição detalhada fornecida pelo usuário; consultar arquivos originais se estiverem disponíveis em outro chat/superfície.
 - Dumps brutos da tela azul (apenas saída textual WinDbg).
-- Relatório FINAL MemTest86 com quatro passagens; foto disponível mostra só 2/4, 75%, zero erros.
+- Resultado MemTest86: usuário informou **PASS após conclusão** em 23/09; fotos chegam até 4ª passagem em 66%, com 0 erros naquele momento. Sem foto final e sem contagem numérica final, porque o celular descarregou. Relato é suficiente para encerrar o exame; não exigir foto.
 - Logs primários específicos do Windows 11; relato do usuário é claro sobre a ocorrência, mas sem matriz de códigos naquele SO.
+- **04/09** o controlador SATA constava iniciado com Intel 15.9.1.1018 no teste; isso substitui a necessidade de tratar o reboot pendente de 29/08 como atual.
 - Estado **atual** de drivers iaStorA/storahci, ME Manufacturing Mode, firmware ME/EC e serviços Windows após os reparos: dados históricos não representam presente.
 
 ## Conflitos a preservar
@@ -22,4 +24,4 @@
 
 **É proibido declarar “li todos os chats por inteiro” usando somente os resumos/arquivos listados.** Esta base registra o que foi efetivamente acessado e os fatos relatados, para que futuras sessões aprofundem apenas lacunas materiais.
 
-[Correlações](./correlacoes-windows-ubuntu.md) · [Plano](./plano-corretivo.md) · [Projeto](./README.md).
+[Funil](./triagem-causal-consolidada.md) · [Correlações](./correlacoes-windows-ubuntu.md) · [Plano](./plano-corretivo.md) · [Projeto](./README.md).
