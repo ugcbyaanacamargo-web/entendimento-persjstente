@@ -5,17 +5,22 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: prepare-risk-controlled-third-party-driver-isolation
-  instruction: "Agente: usando somente inventarios de drivers e logs ja existentes, preparar uma selecao restrita de drivers de terceiros e o plano de backup/recuperacao de boot para eventual isolamento da corrupcao de PTE. NAO ativar Driver Verifier nem reiniciar/alterar Windows sem autorizacao especifica. Em paralelo preservar casos de firmware, ACPI/EC/energia, Bluetooth e AppX, sem fingir causa unica."
-  expected_evidence: "Proposta curta: drivers candidatos e justificativa, protecao de dados, como reverter eventual loop de boot e autorizacao antes de qualquer teste arriscado. Causa do BSOD continua desconhecida."
-  why_now: "Relatorio WinDbgX posterior de 23/09 JA analisou ambos os minidumps e MEMORY.DMP, sem identificar escritor; repetir a abertura solicitada antes seria redundante."
+  id: verify-remaining-cases-after-cip-removal
+  instruction: "Agente: Intel Computing Improvement Program e driver SUR semav6msr64 JA foram removidos e validados remotamente. Nao repetir a remocao nem ativar Driver Verifier agora. Preservar e diferenciar BSOD sem autor, firmware de seguranca Ubuntu nao retestado, ACPI/EC/Event37, Bluetooth e AppX. Proxima intervencao exige prova especifica e autorizacao se arriscada."
+  expected_evidence: "Registro factual de eventual sintoma novo sob uso cotidiano ou selecao da proxima correcao independente; em caso de novo BSOD, preservar dump e diferenciar do historico."
+  why_now: "Remocao do programa opcional Intel CIP concluiu com codigos 0 e verificacao de ausencia do driver/servicos QUEENCREEK; sem nova tela azul observada apos ela, nao declarar BSOD resolvido."
 last_observation:
   observed_at: "2026-09-23"
-  source: prior_audit
-  evidence_ref: EV-19
-  summary: "Relatorios locais posteriores confirmam WinDbgX executado nos tres dumps: BSOD 05/09 e 23/09 com 0x1A/0x41792, ONE_BIT e mesmo bucket; deteccao em MiDeletePagablePteRange na memoria do Edge em 23/09, autor nao identificado, pilha de 05/09 limitada por simbolos. Verifier desativado; firmware ME/BootGuard ainda sem reteste."
+  source: raw_log
+  evidence_ref: EV-21
+  summary: "Desktop Commander: ponto de restauracao criado, Intel CIP MSI e bundle removidos oficialmente com retornos 0, semav6msr64 e QUEENCREEK ausentes; iaStorAC, MEIx64 e PawnIO preservados. Driver Verifier desativado; causa da tela azul continua desconhecida."
 
 completed_checks:
+  - id: remove-intel-cip-queencreek
+    result: "Remocao oficial de Intel Computing Improvement Program MSI e bundle; zero entradas remanescentes, zero servicos/processos QUEENCREEK e driver semav6msr64 ausente. Restore point criado; nenhum reboot ou Driver Verifier."
+    observed_at: "2026-09-23"
+    source: raw_log
+    evidence_ref: EV-21
   - id: lenovo-usb-diagnostics
     result: "Sem erros relatados pelo usuario."
     observed_at: "2026-09-23"
