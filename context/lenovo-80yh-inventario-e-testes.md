@@ -16,7 +16,9 @@
 | Diagnóstico Lenovo pelo pendrive | Usuário confirmou **sem erros**, antes do MemTest86 | Não verifica todas as condições intermitentes/firmware |
 | SMART curto WD Green | Aprovado, sem erros apresentados | Não encerra os WHEA da comunicação SATA |
 | SSD firmware | Dashboard exibiu versão 42077100 como atualizada | Versão declarada não prova integridade de todos os dados |
-| MemTest86 v11.7 Free | Foto em 23/09: **passagem 1 completa sem erros; passagem 2/4 com 75%, total 0** | **Resultado final de quatro passagens ainda não fornecido nesta conversa** |
+| MemTest86 v11.7 Free | **PASS final informado pelo usuário em 23/09**; fotos da quarta passagem com 0 erros acumulados | Resultado informado por texto, sem contagem final numérica; não elimina falhas intermitentes nem aponta a causa da tela azul |
+| Teste SATA/PHY 04/09 | Cinco ciclos de escrita/leitura sem novos erros storage/WHEA na janela | [Detalhes](../projects/formatacao-correta/testes-04-09-resultados.md); não é garantia de ausência de falha futura |
+| Stress CPU/energia 04/09 | Oito ciclos AC sem novos Event 37/ACPI 13/15/WHEA na janela | [Detalhes](../projects/formatacao-correta/testes-04-09-resultados.md); não apaga eventos históricos |
 | Windows DISM/SFC | Conclusões bem-sucedidas em coletas/reparos distintos | Não equivale a Store ou BSOD funcionalmente resolvidos |
 | NVIDIA Windows | GPU 940MX acionou em teste 3D | Não elimina falha nvidia-smi no Ubuntu |
 
