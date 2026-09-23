@@ -1,6 +1,8 @@
 # FORMATAÇÃO CORRETA — execução em três fases até instalação limpa
 **Decisão do usuário em 23/09/2026:** objetivo FINAL é notebook funcional depois de uma reinstalação limpa por pendrive. O agente é responsável por organizar as decisões, preparar instruções e conferir retornos; o usuário leigo recebe uma ação por vez. **Nenhuma ação no notebook foi executada ao escrever esta nota.**
 
+**Antes de cada ação:** abrir [estado atual](./estado-atual.md) e [evidências](./registro-de-evidencias.md); registrar mudanças pelo [procedimento](../../runbooks/ingestao-de-resultados.md).
+
 ## 1 — Fechar o que já foi investigado (sem auditoria geral)
 - Receber só a foto do **resultado FINAL** do MemTest86 em execução; última foto disponível: 2/4, 75% da segunda, 0 erros. Não repetir o teste.
 - Diagnóstico Lenovo por pendrive e SMART curto WD Green: usuário já informou que passaram. Não repetir.

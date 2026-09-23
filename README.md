@@ -14,6 +14,10 @@
 | Rascunhos | Hipóteses ainda não demonstradas | [scratchpad/README.md](./scratchpad/README.md) |
 | Procedimentos | Ações delimitadas e critérios de encerramento | [runbooks/README.md](./runbooks/README.md) |
 
+## Memória semântica em operação documental
+
+[Protocolo](./context/protocolo-memoria-semantica.md) · [Como inserir dados](./runbooks/ingestao-de-resultados.md) · [Estado e ação atual](./projects/formatacao-correta/estado-atual.md) · [Relações](./projects/formatacao-correta/mapa-de-relacoes.md) · [Registro de provas](./projects/formatacao-correta/registro-de-evidencias.md).
+
 ## Memória já consolidada
 
 | Nota | Assunto |
@@ -29,7 +33,7 @@
 
 ## Como recuperar o entendimento
 
-1. Consulte [AGENTS.md](./AGENTS.md) e o [índice do projeto](./projects/formatacao-correta/README.md).
+1. Consulte [AGENTS.md](./AGENTS.md), [protocolo](./context/protocolo-memoria-semantica.md) e [estado atual](./projects/formatacao-correta/estado-atual.md).
 2. Leia a nota sobre o problema solicitado, mais [correlações](./projects/formatacao-correta/correlacoes-windows-ubuntu.md) e [fontes/lacunas](./projects/formatacao-correta/fontes-e-lacunas.md).
 3. **Não transforme um resultado de agosto em estado atual de setembro.** Distinga log original, resumo anterior, declaração do usuário, inferência e correção verificada.
 4. Não repita teste já encerrado sem justificar qual nova informação ele acrescentará.

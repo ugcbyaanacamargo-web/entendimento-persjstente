@@ -5,6 +5,13 @@
 
 **Para o usuário leigo:** uma ação por vez; agente decide e confere a saída. [Roteiro em 3 fases](./execucao-em-tres-fases.md) e [prioridades](./prioridades-e-provas.md).
 
+## Motor de leitura/ingestão
+
+- [Estado operacional e próxima ação](./estado-atual.md)
+- [Registro de provas e proveniência](./registro-de-evidencias.md)
+- [Mapa semântico entre problemas](./mapa-de-relacoes.md)
+- [Instruções para inserir novos resultados](../../runbooks/ingestao-de-resultados.md)
+
 ## Comece nesta ordem
 1. [Inventário/testes já realizados](../../context/lenovo-80yh-inventario-e-testes.md).
 2. [Linha do tempo](./linha-do-tempo.md): o que foi feito e quando.
@@ -15,6 +22,9 @@
 ## Notas por assunto
 | Assunto | Nota | Estado |
 | --- | --- | --- |
+| **Estado operacional** | [estado-atual.md](./estado-atual.md) | Ação única, histórico e não repetição |
+| **Registro de provas** | [registro-de-evidencias.md](./registro-de-evidencias.md) | Data, fonte e limite |
+| **Mapa semântico** | [mapa-de-relacoes.md](./mapa-de-relacoes.md) | Correlação Windows–Ubuntu sem causalidade inventada |
 | **Roteiro operacional para a instalação final** | [execucao-em-tres-fases.md](./execucao-em-tres-fases.md) | Ações limitadas para chegar à meta |
 | **Prioridades / evidências** | [prioridades-e-provas.md](./prioridades-e-provas.md) | Resolver o que é plausível e comprovável |
 | Firmware de segurança / CSME | [firmware-seguranca.md](./firmware-seguranca.md) | Ubuntu reportou anomalias; requer procedimento específico |

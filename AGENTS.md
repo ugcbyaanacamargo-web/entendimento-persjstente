@@ -8,6 +8,11 @@
 5. Fale com usuário leigo: UMA instrução operacional por vez (execute/clique/baixe/envie), o que esperar e risco somente quando necessário. Sem aula técnica nem 10 possibilidades na mesma resposta. Detalhes ficam nas notas.
 6. **META FINAL FORMATAÇÃO CORRETA: uma instalação limpa pelo pendrive depois de resolver/documentar impedimentos persistentes**, conforme [roteiro de três fases](./projects/formatacao-correta/execucao-em-tres-fases.md).
 
+## Regras de memória obrigatórias
+- **Ler a cada tarefa complexa:** [protocolo](./context/protocolo-memoria-semantica.md), [estado atual](./projects/formatacao-correta/estado-atual.md), [provas](./projects/formatacao-correta/registro-de-evidencias.md) e [relações](./projects/formatacao-correta/mapa-de-relacoes.md), mais nota temática.
+- **Novo resultado:** aplicar [ingestão de informações](./runbooks/ingestao-de-resultados.md): fonte, data, deduplicação, tipo de relação, decisão, atualização GitHub e conferência do commit.
+- “Ativar memória” aqui significa seguir documentação e efetivamente usar o conector; não significa sincronização ou execução automática.
+
 ## Ao consolidar conhecimento
 - Uma nota Markdown por assunto; fonte, data, nível de confirmação, ligações relativas e próximo ponto de decisão.
 - Atualize índice local e o [mapa central](./README.md). Guarde hipóteses em [scratchpad](./scratchpad/README.md).
