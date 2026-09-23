@@ -22,3 +22,8 @@
 Confirmar sintomas concretos (transição suspensão/retorno, energia AC, Event 13/15/37) e tratar primeiro configurações reversíveis de energia, depois compatibilidade OEM do ACPI/Serial IO, sem atualizar BIOS/EC às cegas.
 
 [Funil](./triagem-causal-consolidada.md) · [Correlações](./correlacoes-windows-ubuntu.md) · [Firmware](./firmware-seguranca.md) · [Drivers](./drivers-rede-e-gpu.md) · [Plano](./plano-corretivo.md).
+## Nova ocorrencia (consulta local Codex, 23/09 ~17h30)
+
+O teste de 04/09 nao reproduziu Event 37, mas a consulta posterior encontrou **19 novos eventos entre 11 e 23/09**, quatro em 23/09, ultimo ~16h40. Um registro informa processador logico 3 limitado durante 71 segundos. Nenhum ACPI 13/15 apareceu na mesma janela filtrada. Event 37 e uma limitacao de frequencia comandada pela plataforma; temperatura, alimentacao e causa concreta nao foram determinadas. Nao vincular automaticamente ao BSOD.
+
+[Registro EV-12](./registro-de-evidencias.md) · [Funil](./triagem-causal-consolidada.md).
