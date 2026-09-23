@@ -16,3 +16,6 @@ Driver/dispositivo escrevendo memória indevida; caminho RAM/controlador de mem�
 **Teste MemTest86 encerrado com PASS informado em 23/09**; não pedir fotografia final nem outro MemTest automaticamente. A tela azul continua caso separado, e o agente só atribuirá autor a partir de evidência específica. [Funil atualizado](./triagem-causal-consolidada.md).
 
 [Inventário](../../context/lenovo-80yh-inventario-e-testes.md) · [ACPI](./acpi-ec-energia-tpm.md) · [Plano](./plano-corretivo.md).
+## Analise local posterior (23/09 ~17h30)
+
+Codex localizou minidumps de 05/09 e 23/09, alem de MEMORY.DMP de ~2,5 GB. WinDbgX esta instalado, mas a chamada pela CLI foi bloqueada e **nao houve nova depuracao**. WinDbg anterior havia detectado PTE corrompida, sem identificar quem modificou a memoria. Nenhum dispositivo presente apresentou codigo PnP de erro na consulta local. Fonte [EV-14](./registro-de-evidencias.md). Nao inferir que Event 37 contemporaneo causou a tela azul.
