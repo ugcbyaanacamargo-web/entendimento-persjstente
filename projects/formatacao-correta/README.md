@@ -45,4 +45,4 @@
 [Índice de projetos](../README.md) · [Mapa mental central](../../README.md).
 ## Confronto global atualizado em 23/09
 
-[Leia o confronto dos DOIS minidumps, CPER WHEA original, Bluetooth, energia, ACPI e Windows](./confronto-global-23-09.md). A proxima acao oficial esta em [STATE.yaml](../../memory/STATE.yaml). **Nao reduzir o projeto a Event 37/lentidao.**
+[Leia o confronto dos DOIS minidumps, CPER WHEA original, Bluetooth, energia, ACPI e Windows](./confronto-global-23-09.md). **Adendo posterior:** WinDbgX ja analisou ambos os minidumps e o dump completo, mas nao identificou quem corrompeu a PTE. O pedido antigo de abrir novamente o dump de 05/09 foi cancelado. A proxima acao oficial esta em [STATE.yaml](../../memory/STATE.yaml). **Nao reduzir o projeto a Event 37/lentidao.**
