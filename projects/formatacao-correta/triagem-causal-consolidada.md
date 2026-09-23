@@ -14,6 +14,9 @@
 | NVIDIA | Ubuntu: nvidia-smi falhava; Windows: GeForce 940MX ativou em teste 3D. | Comportamento distinto por sistema e configuração Optimus; nenhuma prova de dano físico. | Somente reabrir se a função necessária falhar; não trocar GPU. |
 | Wi-Fi | Windows 29/08: Intel AC3165 22 eventos Netwtw04 5007 na auditoria histórica. | Sem prova de recorrência contemporânea ou homólogo Linux recuperado. | Verificar apenas com sintoma novo; um driver por alteração, nunca pacote de todos os drivers. |
 
+## Driver adicional documentado, sem condenação precipitada
+A listagem de drivers do Windows inclui `ROOT/PAWNIO` com `pawnio.inf` versão 2.2.0.0, identificado como iniciado no instante da coleta. **Não consta identificado como autor no WinDbg**; só entra na verificação de programas com acesso de baixo nível se houver nova tela azul ou reprodução específica. [Evidência EV-11](./registro-de-evidencias.md).
+
 ## Passos já encerrados
 MemTest86 PASS relatado; teste diagnóstico Lenovo pendrive; SMART curto WD; teste SATA/PHY 04/09; stress CPU/Event37 04/09. **Não abrir novo diagnóstico geral nem repetir esses exames sem novo fato.**
 
