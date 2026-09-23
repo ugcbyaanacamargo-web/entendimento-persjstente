@@ -5,15 +5,15 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: firmware-security-decision
-  instruction: "Agente: confrontar os achados Ubuntu de Intel ME/CSME, Flash Descriptor e BootGuard com fontes Lenovo aplicaveis ao Type 80YH/NM-B242 e registrar o que pode ser corrigido com seguranca; solicitar log original somente se for indispensavel para a decisao. Nao alterar o notebook nesta etapa."
-  expected_evidence: "Decisao documentada: reparo oficial possivel, limitacao de fabrica ou necessidade de assistencia especializada, com referencia de origem."
-  why_now: "MemTest86 PASS relatado; SATA e stress CPU ja testados sem reproduzir eventos na janela. Evitar auditorias repetidas e flash por tentativa."
+  id: correlate-recurring-event37
+  instruction: "Agente: avaliar somente os novos Event 37 (11-23/09), em especial 23/09 16h40, contra uso na tomada, sintomas reais e configuracao de energia ja registrada. Solicitar ao usuario se houve lentidao e se estava em AC; nao repetir stress nem alterar firmware."
+  expected_evidence: "Classificacao: politica de energia/limitacao esperada, cap anormal reproduzido ou causa ainda nao identificada; somente intervencao pequena e segura se demonstrada."
+  why_now: "Codex 23/09 confirmou 19 novos Event 37 apos o teste de 04/09; o aviso e atual, mas nao comprova causa da tela azul."
 last_observation:
   observed_at: "2026-09-23"
-  source: user_report
-  evidence_ref: EV-08
-  summary: "Usuario voltou ao computador e informou resultado final PASS do MemTest86. Fotos anteriores mostram quarta passagem 66% e zero erros acumulados; contagem final numerica nao foi transcrita."
+  source: raw_log
+  evidence_ref: EV-12
+  summary: "Codex 17h30: 19 Event 37 novos em 11-23/09, ultimo ~16h40; erro de tela azul confirmado, origem nao identificada; controlador SATA atual iaStorAC 17.8.1.1066 e sem erros PnP presentes."
 completed_checks:
   - id: lenovo-usb-diagnostics
     result: "Sem erros relatados pelo usuario."
@@ -46,7 +46,7 @@ open_cases:
     status: in_progress
   - id: acpi-ec-power
     file: projects/formatacao-correta/acpi-ec-energia-tpm.md
-    status: pending
+    status: in_progress
   - id: blue-screen
     file: projects/formatacao-correta/memoria-e-tela-azul.md
     status: pending
