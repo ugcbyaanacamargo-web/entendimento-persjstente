@@ -14,7 +14,7 @@ routes:
       - projects/formatacao-correta/acpi-ec-energia-tpm.md
       - projects/formatacao-correta/correlacoes-windows-ubuntu.md
   - id: memory
-    keywords: [memtest, memoria, ram, tela azul, bsod, 0x1a, 0x41792, travamento]
+    keywords: [memtest, memoria, ram, tela azul, bsod, '0x1a', '0x41792', travamento]
     files:
       - projects/formatacao-correta/memoria-e-tela-azul.md
       - context/lenovo-80yh-inventario-e-testes.md
