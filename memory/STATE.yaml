@@ -5,15 +5,15 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: verify-remaining-cases-after-cip-removal
-  instruction: "Agente: Intel Computing Improvement Program e driver SUR semav6msr64 JA foram removidos e validados remotamente. Nao repetir a remocao nem ativar Driver Verifier agora. Preservar e diferenciar BSOD sem autor, firmware de seguranca Ubuntu nao retestado, ACPI/EC/Event37, Bluetooth e AppX. Proxima intervencao exige prova especifica e autorizacao se arriscada."
-  expected_evidence: "Registro factual de eventual sintoma novo sob uso cotidiano ou selecao da proxima correcao independente; em caso de novo BSOD, preservar dump e diferenciar do historico."
-  why_now: "Remocao do programa opcional Intel CIP concluiu com codigos 0 e verificacao de ausencia do driver/servicos QUEENCREEK; sem nova tela azul observada apos ela, nao declarar BSOD resolvido."
+  id: obtain-verified-external-backup-before-risky-diagnostics
+  instruction: "Usuario: conectar unidade externa com espaco suficiente para backup verificado. Agente, quando presente: identificar disco externo SEM apagar ou formatar, preparar imagem recuperavel e preservar dumps antes de propor Driver Verifier seletivo. Nao fazer firmware, Secure Erase, reset TPM ou instalacao final automaticamente. Outros casos continuam distintos."
+  expected_evidence: "Unidade fisica externa confirmada, backup de dados e imagem valida com retorno pratico, plano de recuperacao de boot, autorizacao especifica antes de teste disruptivo; se nao houver unidade, registrar bloqueio."
+  why_now: "Desktop Commander 23/09 confirmou nenhum volume externo conectado, WinRE somente habilitado e nenhum backup externo; tela azul sem autor e firmware Intel ME sem medicao atual. Outras ocorrencias AppX ja atualizaram e driver Intel 3165 ja esta em ultima versao oficial."
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-21
-  summary: "Desktop Commander: ponto de restauracao criado, Intel CIP MSI e bundle removidos oficialmente com retornos 0, semav6msr64 e QUEENCREEK ausentes; iaStorAC, MEIx64 e PawnIO preservados. Driver Verifier desativado; causa da tela azul continua desconhecida."
+  evidence_ref: EV-24
+  summary: "Desktop Commander: PC Manager e Codex atualizados e Status Ok, PowerShell 7.6 abre; Bluetooth BTHUSB17 cinco vezes ate 20/09, Wi-Fi 5007 ultimo 05/09, ambos usando as ultimas versoes Intel 3165; 0 erros PnP e nenhum WHEA novo no filtro. Nenhum disco externo disponivel. CIP removido; causas BSOD/firmware ainda abertas."
 
 completed_checks:
   - id: remove-intel-cip-queencreek
