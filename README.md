@@ -22,6 +22,10 @@
 
 [Protocolo](./context/protocolo-memoria-semantica.md) · [Como inserir dados](./runbooks/ingestao-de-resultados.md) · [Estado e ação atual](./memory/STATE.yaml) · [Relações](./projects/formatacao-correta/mapa-de-relacoes.md) · [Registro de provas](./projects/formatacao-correta/registro-de-evidencias.md).
 
+## Funil da investigação
+
+**[Leia primeiro a triagem causal após o MemTest86 PASS](./projects/formatacao-correta/triagem-causal-consolidada.md).** Os [testes reais de 04/09](./projects/formatacao-correta/testes-04-09-resultados.md) atualizaram os erros de armazenamento e energia observados em agosto. Não tratar observações antigas como falhas atuais.
+
 ## Memória já consolidada
 
 | Nota | Assunto |
@@ -37,7 +41,7 @@
 
 ## Como recuperar o entendimento
 
-1. Consulte [AGENTS.md](./AGENTS.md), [protocolo](./context/protocolo-memoria-semantica.md) e [estado atual](./projects/formatacao-correta/estado-atual.md).
+1. Consulte [AGENTS.md](./AGENTS.md), [protocolo](./context/protocolo-memoria-semantica.md) e [estado atual](./memory/STATE.yaml).
 2. Leia a nota sobre o problema solicitado, mais [correlações](./projects/formatacao-correta/correlacoes-windows-ubuntu.md) e [fontes/lacunas](./projects/formatacao-correta/fontes-e-lacunas.md).
 3. **Não transforme um resultado de agosto em estado atual de setembro.** Distinga log original, resumo anterior, declaração do usuário, inferência e correção verificada.
 4. Não repita teste já encerrado sem justificar qual nova informação ele acrescentará.
