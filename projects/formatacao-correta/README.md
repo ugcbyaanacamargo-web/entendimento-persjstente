@@ -43,3 +43,6 @@
 **Regra central:** a persistência de sintomas entre SOs orienta a investigação da plataforma, mas não transforma todos os eventos em uma única causa comprovada.
 
 [Índice de projetos](../README.md) · [Mapa mental central](../../README.md).
+## Confronto global atualizado em 23/09
+
+[Leia o confronto dos DOIS minidumps, CPER WHEA original, Bluetooth, energia, ACPI e Windows](./confronto-global-23-09.md). A proxima acao oficial esta em [STATE.yaml](../../memory/STATE.yaml). **Nao reduzir o projeto a Event 37/lentidao.**
