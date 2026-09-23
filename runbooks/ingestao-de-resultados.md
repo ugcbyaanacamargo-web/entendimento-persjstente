@@ -14,6 +14,6 @@
 ## Campos de nota atômica
 Título/ID; SO/componente; data da ocorrência/registro; origem; grau de confirmação; erro exato; funcionamento esperado; notas relacionadas e tipo de relação; ações anteriores e resultados; próxima ação ÚNICA; teste de sucesso; risco/reversão.
 
-**Exemplo:** foto MemTest86 de 23/09: passagem 1 concluída sem erros, passagem 2 em 75%, zero acumulado. Não atualizar para PASS 4/4 sem a imagem final. Não repetir Lenovo Diagnostics e SMART já realizados.
+**Exemplo atualizado 23/09:** fotos parciais do MemTest86 mostraram zero erros até a quarta passagem; usuário confirmou PASS final por texto após voltar ao notebook. Registrar o PASS como relato, sem inventar contagem numérica final nem exigir fotografia; não repetir Lenovo Diagnostics, SMART e MemTest já concluídos.
 
 [Índice](./README.md) · [Objetivo de três fases](../projects/formatacao-correta/execucao-em-tres-fases.md).
