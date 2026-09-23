@@ -8,6 +8,8 @@
 ## Motor de leitura/ingestão
 
 - [Estado operacional e próxima ação](../../memory/STATE.yaml)
+- **[Funil causal consolidado após PASS no MemTest86](./triagem-causal-consolidada.md)**
+- [Testes de SATA/energia de 04/09 já concluídos](./testes-04-09-resultados.md)
 - [Registro de provas e proveniência](./registro-de-evidencias.md)
 - [Mapa semântico entre problemas](./mapa-de-relacoes.md)
 - [Instruções para inserir novos resultados](../../runbooks/ingestao-de-resultados.md)
@@ -23,14 +25,16 @@
 | Assunto | Nota | Estado |
 | --- | --- | --- |
 | **Estado operacional** | [STATE.yaml](../../memory/STATE.yaml) | Fonte única da ação, histórico e não repetição |
+| **Funil causal** | [triagem-causal-consolidada.md](./triagem-causal-consolidada.md) | Ligação dos três SOs, o que já foi refutado e a próxima decisão |
+| **Testes posteriores** | [testes-04-09-resultados.md](./testes-04-09-resultados.md) | Resultados SATA e CPU posteriores aos eventos históricos |
 | **Registro de provas** | [registro-de-evidencias.md](./registro-de-evidencias.md) | Data, fonte e limite |
 | **Mapa semântico** | [mapa-de-relacoes.md](./mapa-de-relacoes.md) | Correlação Windows–Ubuntu sem causalidade inventada |
 | **Roteiro operacional para a instalação final** | [execucao-em-tres-fases.md](./execucao-em-tres-fases.md) | Ações limitadas para chegar à meta |
 | **Prioridades / evidências** | [prioridades-e-provas.md](./prioridades-e-provas.md) | Resolver o que é plausível e comprovável |
 | Firmware de segurança / CSME | [firmware-seguranca.md](./firmware-seguranca.md) | Ubuntu reportou anomalias; requer procedimento específico |
 | ACPI, EC, energia e TPM | [acpi-ec-energia-tpm.md](./acpi-ec-energia-tpm.md) | Correspondências entre SOs |
-| SSD, SATA, WHEA | [armazenamento-e-whea.md](./armazenamento-e-whea.md) | WHEA histórico; driver histórico em transição |
-| Tela azul, RAM | [memoria-e-tela-azul.md](./memoria-e-tela-azul.md) | BSOD real; MemTest final pendente |
+| SSD, SATA, WHEA | [armazenamento-e-whea.md](./armazenamento-e-whea.md) | WHEA histórico; teste posterior com controlador iniciado |
+| Tela azul, RAM | [memoria-e-tela-azul.md](./memoria-e-tela-azul.md) | BSOD real; MemTest final PASS relatado, autor em aberto |
 | Rede, NVIDIA e drivers | [drivers-rede-e-gpu.md](./drivers-rede-e-gpu.md) | Problemas separados |
 | Windows Update, Store e HKLM/HKCU | [windows-servicos-registro.md](./windows-servicos-registro.md) | Erros próprios do Windows |
 | O que ainda é hipótese | [scratchpad](../../scratchpad/formatacao-correta-hipoteses-abertas.md) | Não publicar como causa |
