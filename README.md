@@ -1,38 +1,36 @@
 # Mapa mental central — entendimento persistente
 
-> Índice da memória de trabalho baseada em arquivos Markdown e versionada no GitHub.
+> Índice de memória de trabalho em Markdown, versionada no GitHub. **Repositório público:** não publicar nomes de usuário, números de série, UUIDs, e-mails, credenciais, dumps brutos ou detalhes privados.
 
 **Atualizado em:** 2026-09-23  
-**Modelo de referência:** [AI Knowledge Base (AIKB)](https://github.com/mcglothi/ai-knowledge-base). Esta é uma adaptação documental mínima, não a instalação do motor ou das automações do AIKB.
+**Referência estrutural:** [AI Knowledge Base (AIKB)](https://github.com/mcglothi/ai-knowledge-base). Adaptação documental: não instala nem executa o motor do AIKB.
 
 ## Comece por aqui
 
 | Área | Para que serve | Índice |
 | --- | --- | --- |
-| Contexto | Histórico, fatos confirmados, entendimentos e decisões gerais | [context/README.md](./context/README.md) |
-| Projetos | Índice de projetos ativos, objetivos, decisões e próximos passos | [projects/README.md](./projects/README.md) |
-| Rascunhos | Hipóteses, notas temporárias e informações ainda não verificadas | [scratchpad/README.md](./scratchpad/README.md) |
-| Procedimentos | Passos repetíveis de coleta, execução, validação e reversão segura | [runbooks/README.md](./runbooks/README.md) |
+| Contexto | Hardware e fatos duráveis | [context/README.md](./context/README.md) |
+| Projetos | Investigações, decisões e estado de correção | [projects/README.md](./projects/README.md) |
+| Rascunhos | Hipóteses ainda não demonstradas | [scratchpad/README.md](./scratchpad/README.md) |
+| Procedimentos | Ações delimitadas e critérios de encerramento | [runbooks/README.md](./runbooks/README.md) |
 
 ## Memória já consolidada
 
 | Nota | Assunto |
 | --- | --- |
-| [Decisão de estrutura inicial](./context/2026-09-23-estrutura-memoria.md) | Origem do modelo, diretórios e limites desta implantação |
+| [Estrutura de memória](./context/2026-09-23-estrutura-memoria.md) | Convenções e limites |
+| [Inventário técnico do Lenovo](./context/lenovo-80yh-inventario-e-testes.md) | Peças e verificações já realizadas |
+| [FORMATAÇÃO CORRETA — projeto central](./projects/formatacao-correta/README.md) | **Leia antes de orientar qualquer intervenção no notebook** |
+| [Correlações Windows ↔ Ubuntu](./projects/formatacao-correta/correlacoes-windows-ubuntu.md) | O que coincide e o que não coincide |
+| [Plano corretivo com encerramento](./projects/formatacao-correta/plano-corretivo.md) | Próximas decisões, sem auditoria infinita |
+| [Procedimento de decisão e validação](./runbooks/formatacao-correta-ciclo-de-correcao.md) | Como não repetir tentativas |
 
 ## Como recuperar o entendimento
 
-1. Leia este `README.md` para localizar o assunto.
-2. Abra apenas o índice e as notas diretamente relacionados à tarefa atual.
-3. Confira no sistema ou repositório de origem se informações mutáveis continuam válidas.
-4. Diferencie informação confirmada, decisão, hipótese e pendência.
-5. Registre aprendizados duradouros em um `.md` curto por assunto; atualize o índice da pasta e este mapa quando houver uma nova nota importante.
+1. Consulte [AGENTS.md](./AGENTS.md) e o [índice do projeto](./projects/formatacao-correta/README.md).
+2. Leia a nota sobre o problema solicitado, mais [correlações](./projects/formatacao-correta/correlacoes-windows-ubuntu.md) e [fontes/lacunas](./projects/formatacao-correta/fontes-e-lacunas.md).
+3. **Não transforme um resultado de agosto em estado atual de setembro.** Distinga log original, resumo anterior, declaração do usuário, inferência e correção verificada.
+4. Não repita teste já encerrado sem justificar qual nova informação ele acrescentará.
+5. Grave uma conclusão nova em nota atômica e atualize os índices somente quando houver conexão/autorização e ação efetivamente executada.
 
-## Regras de armazenamento
-
-- Use nomes descritivos em `kebab-case` e links relativos entre arquivos.
-- Mantenha rascunhos não confirmados em [scratchpad](./scratchpad/README.md); após validação, mova o conhecimento para [context](./context/README.md), [projects](./projects/README.md) ou [runbooks](./runbooks/README.md).
-- Não salve senhas, tokens, chaves privadas ou dados sensíveis. Verifique a visibilidade do repositório antes de registrar detalhes não públicos.
-- Não trate o conteúdo como sincronização automática: o agente precisa ter acesso ao repositório e efetivamente consultar/gravar os arquivos em cada sessão relevante.
-
-**Instruções para agentes:** [AGENTS.md](./AGENTS.md).
+**Nota:** GitHub armazena o entendimento; não lê automaticamente todos os chats, não monitora o Lenovo e não executa consertos.

@@ -1,15 +1,7 @@
-# Runbooks — procedimentos reutilizáveis
-
-Procedimentos recorrentes: o que fazer, em que ordem, como validar o resultado e como reverter uma mudança quando for seguro.
+# Runbooks — procedimentos de decisão e validação
 
 | Procedimento | Documento |
 | --- | --- |
-| Ainda não registrado | — |
+| Ciclo de correção — FORMATAÇÃO CORRETA | [Passos, riscos e encerramento](./formatacao-correta-ciclo-de-correcao.md) |
 
-## Como cadastrar
-
-Cada `.md` deve tratar de uma tarefa repetível e incluir pré-requisitos, ações, riscos, validação e referências oficiais quando cabível. Documente decisões gerais em [contexto](../context/README.md) e relacione procedimentos aos [projetos](../projects/README.md) que os utilizam.
-
-Esta pasta segue a função de `runbooks/` do [modelo AIKB](https://github.com/mcglothi/ai-knowledge-base/tree/main/runbooks).
-
-Voltar ao [mapa central](../README.md).
+[Projeto](../projects/formatacao-correta/README.md) · [Mapa central](../README.md).
