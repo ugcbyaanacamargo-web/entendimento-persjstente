@@ -46,3 +46,7 @@
 ## Confronto global atualizado em 23/09
 
 [Leia o confronto dos DOIS minidumps, CPER WHEA original, Bluetooth, energia, ACPI e Windows](./confronto-global-23-09.md). **Adendo posterior:** WinDbgX ja analisou ambos os minidumps e o dump completo, mas nao identificou quem corrompeu a PTE. O pedido antigo de abrir novamente o dump de 05/09 foi cancelado. A proxima acao oficial esta em [STATE.yaml](../../memory/STATE.yaml). **Nao reduzir o projeto a Event 37/lentidao.**
+
+## Checkpoint remoto verificado
+
+[Estado do Lenovo após intervenções reais de 23/09](./checkpoint-remoto-23-09.md): Intel CIP/QUEENCREEK removido; PC Manager/Codex atualizados; Wi-Fi/BT já na última versão compatível Intel; limites de backup, firmware e tela azul preservados. Não abrir testes arriscados sem a próxima condição de [STATE.yaml](../../memory/STATE.yaml).
