@@ -6,6 +6,8 @@
 | --- | --- |
 | [STATE.yaml](./STATE.yaml) | **Fonte ÚNICA do estado ATUAL, objetivo/fase e próxima ação** |
 | [ROUTER.yaml](./ROUTER.yaml) | Assunto/pergunta → arquivos existentes |
+| [Funil causal](../projects/formatacao-correta/triagem-causal-consolidada.md) | Como cada evidência altera a próxima decisão sem repetir exames |
+| [Testes 04/09](../projects/formatacao-correta/testes-04-09-resultados.md) | SATA e energia: verificações posteriores a agosto já executadas |
 | [SCHEMA.yaml](./SCHEMA.yaml) | Contratos estruturais para os dois arquivos YAML |
 | [Protocolo](../context/protocolo-memoria-semantica.md) | Evidência x hipótese x decisão |
 | [Ingestão](../runbooks/ingestao-de-resultados.md) | Receber resultados, persistir e fechar ciclo |
