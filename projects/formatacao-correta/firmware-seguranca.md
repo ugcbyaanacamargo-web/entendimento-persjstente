@@ -33,3 +33,6 @@
 **Relação com BSOD:** Manufacturing Mode aberto é problema de proteção, **não foi ligado causalmente** ao dump 0x1A/0x41792.
 
 [Correlações](./correlacoes-windows-ubuntu.md) · [ACPI](./acpi-ec-energia-tpm.md) · [Plano](./plano-corretivo.md) · [Fontes](./fontes-e-lacunas.md).
+## Evidencia adicional local 23/09 (EV-25)
+
+O mapa `MAPA_FIRMWARE_OFICIAL.txt` produzido no notebook identifica imagem OEM Lenovo 4WCN47WW de **8 MiB**, regiões Descriptor, Intel ME e BIOS. O próprio mapa informa que **NÃO existe dump da SPI atual**. O conteúdo de uma imagem oficial distribuída NÃO mostra travas reais da placa em funcionamento, nem justifica um flash. Foi preparado no notebook `ENCAMINHAMENTO_FIRMWARE_LENOVO_80YH.md`, com perguntas de baseline OEM, procedimento de provisionamento/end-of-manufacturing e validação. Não foi enviado à Lenovo nem foi alterado firmware. Relato histórico Ubuntu incluiu ainda `_CPC`, GDS e cerca de 43 resultados FWTS desfavoráveis segundo conversa; SEM arquivo bruto para discriminar/contar mecanismos, não tratar isso como 43 defeitos físicos distintos. [EV-25](./registro-de-evidencias.md).
