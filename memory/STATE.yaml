@@ -3,17 +3,17 @@ project: formatacao-correta
 updated_at: "2026-09-23"
 goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final por pendrive, com validacao funcional."
 phase: preflight
-status: awaiting_user_result
+status: in_progress
 next_action:
-  id: memtest86-final
-  instruction: "Quando o MemTest86 terminar as quatro passagens, envie foto da tela final."
-  expected_evidence: "Imagem com resultado final e total de erros, sem dados pessoais."
-  why_now: "O teste ja esta em execucao; nao iniciar outro diagnostico."
+  id: firmware-security-decision
+  instruction: "Agente: confrontar os achados Ubuntu de Intel ME/CSME, Flash Descriptor e BootGuard com fontes Lenovo aplicaveis ao Type 80YH/NM-B242 e registrar o que pode ser corrigido com seguranca; solicitar log original somente se for indispensavel para a decisao. Nao alterar o notebook nesta etapa."
+  expected_evidence: "Decisao documentada: reparo oficial possivel, limitacao de fabrica ou necessidade de assistencia especializada, com referencia de origem."
+  why_now: "MemTest86 PASS relatado; SATA e stress CPU ja testados sem reproduzir eventos na janela. Evitar auditorias repetidas e flash por tentativa."
 last_observation:
   observed_at: "2026-09-23"
-  source: user_image
-  evidence_ref: EV-05
-  summary: "Passagem 1 terminada; passagem 2 em 75%; zero erros acumulados. Resultado 4/4 desconhecido."
+  source: user_report
+  evidence_ref: EV-08
+  summary: "Usuario voltou ao computador e informou resultado final PASS do MemTest86. Fotos anteriores mostram quarta passagem 66% e zero erros acumulados; contagem final numerica nao foi transcrita."
 completed_checks:
   - id: lenovo-usb-diagnostics
     result: "Sem erros relatados pelo usuario."
@@ -25,10 +25,25 @@ completed_checks:
     observed_at: "2026-09-23"
     source: user_report
     evidence_ref: EV-06
+  - id: memtest86-v11-7
+    result: "PASS final informado pelo usuario apos teste de quatro passagens. Foto durante quarta passagem: zero erros; total numerico final nao informado."
+    observed_at: "2026-09-23"
+    source: user_report
+    evidence_ref: EV-08
+  - id: sata-phy-04-09
+    result: "Cinco ciclos escrita/leitura, controlador Intel RST identificado e nenhum WHEA/erro storage novo durante o teste."
+    observed_at: "2026-09-04"
+    source: raw_log
+    evidence_ref: EV-09
+  - id: cpu-power-stress-04-09
+    result: "Oito ciclos carga/repouso em AC; sem novos Event 37, WHEA ou ACPI 13/15 na janela."
+    observed_at: "2026-09-04"
+    source: raw_log
+    evidence_ref: EV-10
 open_cases:
   - id: firmware-security
     file: projects/formatacao-correta/firmware-seguranca.md
-    status: pending
+    status: in_progress
   - id: acpi-ec-power
     file: projects/formatacao-correta/acpi-ec-energia-tpm.md
     status: pending
