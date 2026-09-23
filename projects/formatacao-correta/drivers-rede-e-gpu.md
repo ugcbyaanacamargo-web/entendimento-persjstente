@@ -16,3 +16,6 @@
 Usar pacote Lenovo para funções específicas de plataforma quando compatível, sem instalar vários drivers juntos; rede e GPU são casos próprios, não explicar Store e BSOD com eles sem reprodução associada.
 
 [ACPI](./acpi-ec-energia-tpm.md) · [Firmware](./firmware-seguranca.md) · [Plano](./plano-corretivo.md).
+## Bluetooth omitido anteriormente — fonte original 23/09
+
+No arquivo completo de eventos incluído no ZIP de 23/09: **BTHUSB Event 17 (20/09 19h15)** relata falha indeterminada do adaptador local e descarregamento do driver; **BTHUSB Event 34 em 23/09** relata apenas ausência de capacidade LE peripheral, não a mesma falha. Tratar separadamente dos 22 Netwtw04 Event5007 do snapshot de agosto; Intel AC3165 combina Wi-Fi e Bluetooth, mas não presumir uma única falha física. O dispositivo aparecer sem código PnP em 23/09 não invalida falha intermitente de 20/09. [Confronto global](./confronto-global-23-09.md) e [EV-17](./registro-de-evidencias.md).
