@@ -5,15 +5,15 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: correlate-recurring-event37
-  instruction: "Agente: avaliar somente os novos Event 37 (11-23/09), em especial 23/09 16h40, contra uso na tomada, sintomas reais e configuracao de energia ja registrada. Solicitar ao usuario se houve lentidao e se estava em AC; nao repetir stress nem alterar firmware."
-  expected_evidence: "Classificacao: politica de energia/limitacao esperada, cap anormal reproduzido ou causa ainda nao identificada; somente intervencao pequena e segura se demonstrada."
-  why_now: "Codex 23/09 confirmou 19 novos Event 37 apos o teste de 04/09; o aviso e atual, mas nao comprova causa da tela azul."
+  id: compare-two-existing-bsod-dumps
+  instruction: "Comparar os dois minidumps ja preservados no ZIP de 23/09: 05/09 e 23/09, ambos MEMORY_MANAGEMENT 0x1A/0x41792. Usar relatorio WinDbg anterior de 23/09 e abrir copia ja extraida do dump de 05/09; NAO repetir auditoria, MemTest nem dar foco exclusivo a lentidao."
+  expected_evidence: "Saida WinDbg do segundo dump e comparacao de pilhas, processos, modulos e drivers; atribuir autor apenas se houver evidencia efetiva."
+  why_now: "Leitura direta dos headers de ambos dumps originais revelou bugcheck e Arg1/3/4 IDENTICOS em duas datas; caminho C:\\Windows\\Minidump falhou no dialogo, mas o ZIP preserva copias."
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-12
-  summary: "Codex 17h30: 19 Event 37 novos em 11-23/09, ultimo ~16h40; erro de tela azul confirmado, origem nao identificada; controlador SATA atual iaStorAC 17.8.1.1066 e sem erros PnP presentes."
+  evidence_ref: EV-15
+  summary: "ZIP real: BSOD 05/09 e 23/09 ambos 0x1A/0x41792 e Args3/4 iguais, PTE distintos. Arquivo de eventos incluiu BTHUSB17 em 20/09 e Event37 pos-reboot em 23/09. Analise GLOBAL, nao apenas lentidao."
 completed_checks:
   - id: lenovo-usb-diagnostics
     result: "Sem erros relatados pelo usuario."
@@ -49,10 +49,13 @@ open_cases:
     status: in_progress
   - id: blue-screen
     file: projects/formatacao-correta/memoria-e-tela-azul.md
-    status: pending
+    status: in_progress
   - id: sata-whea
     file: projects/formatacao-correta/armazenamento-e-whea.md
     status: historical
   - id: windows-store-registry
     file: projects/formatacao-correta/windows-servicos-registro.md
+    status: pending
+  - id: bluetooth-wlan
+    file: projects/formatacao-correta/drivers-rede-e-gpu.md
     status: pending
