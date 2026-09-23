@@ -22,6 +22,8 @@
 | [Inventário técnico do Lenovo](./context/lenovo-80yh-inventario-e-testes.md) | Peças e verificações já realizadas |
 | [FORMATAÇÃO CORRETA — projeto central](./projects/formatacao-correta/README.md) | **Leia antes de orientar qualquer intervenção no notebook** |
 | [Correlações Windows ↔ Ubuntu](./projects/formatacao-correta/correlacoes-windows-ubuntu.md) | O que coincide e o que não coincide |
+| [Três fases até a instalação limpa](./projects/formatacao-correta/execucao-em-tres-fases.md) | **Meta final: formatação correta após sanar impedimentos** |
+| [Prioridades baseadas em provas](./projects/formatacao-correta/prioridades-e-provas.md) | Como escolher menor ação e encerrar |
 | [Plano corretivo com encerramento](./projects/formatacao-correta/plano-corretivo.md) | Próximas decisões, sem auditoria infinita |
 | [Procedimento de decisão e validação](./runbooks/formatacao-correta-ciclo-de-correcao.md) | Como não repetir tentativas |
 

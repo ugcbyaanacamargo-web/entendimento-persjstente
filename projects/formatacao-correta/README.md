@@ -1,18 +1,22 @@
 # FORMATAÇÃO CORRETA — centro de entendimento e correção
 
 **Equipamento:** Lenovo IdeaPad 320-15IKB / Type 80YH / NM-B242. **Atualizado:** 2026-09-23.  
-**Objetivo:** corrigir as falhas observadas em Windows 11, Ubuntu 24.04 e Windows 10 **sem reiniciar a investigação do zero, formatar por tentativa ou substituir peças sem indicação**.
+**OBJETIVO FINAL:** tratar impedimentos demonstrados na plataforma e então realizar **UMA instalação limpa final pelo pendrive**, com drivers controlados e validação de uso real. Nada de formatar por tentativa ou substituir peça sem razão.
+
+**Para o usuário leigo:** uma ação por vez; agente decide e confere a saída. [Roteiro em 3 fases](./execucao-em-tres-fases.md) e [prioridades](./prioridades-e-provas.md).
 
 ## Comece nesta ordem
 1. [Inventário/testes já realizados](../../context/lenovo-80yh-inventario-e-testes.md).
 2. [Linha do tempo](./linha-do-tempo.md): o que foi feito e quando.
 3. [Correlações Windows ↔ Ubuntu](./correlacoes-windows-ubuntu.md): correspondências reais versus coincidências.
-4. [Plano corretivo](./plano-corretivo.md): portas de decisão e condição de conclusão.
+4. [Execução em três fases](./execucao-em-tres-fases.md), [prioridades e provas](./prioridades-e-provas.md) e [plano de casos](./plano-corretivo.md).
 5. [Fontes, ausências e conflitos](./fontes-e-lacunas.md): não confundir relatório anterior com prova direta.
 
 ## Notas por assunto
 | Assunto | Nota | Estado |
 | --- | --- | --- |
+| **Roteiro operacional para a instalação final** | [execucao-em-tres-fases.md](./execucao-em-tres-fases.md) | Ações limitadas para chegar à meta |
+| **Prioridades / evidências** | [prioridades-e-provas.md](./prioridades-e-provas.md) | Resolver o que é plausível e comprovável |
 | Firmware de segurança / CSME | [firmware-seguranca.md](./firmware-seguranca.md) | Ubuntu reportou anomalias; requer procedimento específico |
 | ACPI, EC, energia e TPM | [acpi-ec-energia-tpm.md](./acpi-ec-energia-tpm.md) | Correspondências entre SOs |
 | SSD, SATA, WHEA | [armazenamento-e-whea.md](./armazenamento-e-whea.md) | WHEA histórico; driver histórico em transição |

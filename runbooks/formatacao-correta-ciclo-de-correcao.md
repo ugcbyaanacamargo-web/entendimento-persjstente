@@ -1,6 +1,6 @@
 # Ciclo de correção sem diagnóstico infinito — FORMATAÇÃO CORRETA
 
-**Propósito:** cada erro identificado tem um fim observável. Aplicável ao [Lenovo 80YH](../projects/formatacao-correta/README.md).
+**Propósito:** corrigir bloqueios de forma enxuta para chegar à **formatação limpa final**, com fim observável para cada erro. [Três fases](../projects/formatacao-correta/execucao-em-tres-fases.md). Aplicável ao [Lenovo 80YH](../projects/formatacao-correta/README.md).
 
 1. **Recuperar o caso existente:** ler [linha do tempo](../projects/formatacao-correta/linha-do-tempo.md), [correlações](../projects/formatacao-correta/correlacoes-windows-ubuntu.md) e [fontes](../projects/formatacao-correta/fontes-e-lacunas.md). Não repetir ferramentas Lenovo Diagnostics/SMART/formatar sem justificativa concreta.
 2. **Definir UMA falha observável:** mensagem exata, data, efeito ao usuário, como reproduzir e status após reparos prévios. Distinguir histórica de atual.

@@ -1,6 +1,6 @@
 # Plano de correção com decisões e encerramento — Lenovo 80YH
 
-**Não é plano de nova formatação.** Cada caso deve ter: erro original → mudança única/encaminhamento → repetição da operação real → resultado. Ler [ciclo de correção](../../runbooks/formatacao-correta-ciclo-de-correcao.md).
+**Este plano prepara a instalação limpa FINAL solicitada pelo usuário; não propõe repetição de formatações.** Veja [roteiro em três fases](./execucao-em-tres-fases.md) e [prioridades](./prioridades-e-provas.md). Cada caso deve ter: erro original → mudança única/encaminhamento → repetição da operação real → resultado. Ler [ciclo de correção](../../runbooks/formatacao-correta-ciclo-de-correcao.md).
 
 | Caso | Próxima decisão limitada | Critério de encerramento | Ação indevida |
 | --- | --- | --- | --- |
@@ -18,7 +18,7 @@
 2. **Abrir caso técnico de firmware baseado nos dados Ubuntu já coletados.** Obter referência específica de produção antes de gravar qualquer coisa; fechar por laudo se irreparável na plataforma.
 3. **Resolver a comunicação de energia/ACPI** com mudanças pequenas e reversíveis guiadas pelo sintoma. 
 4. **Encerrar separadamente** armazenamento/WHEA, Windows servicing/AppX/Registro, WLAN/GPU e tela azul: não culpar uma camada apenas por ocorrer no mesmo notebook.
-5. Nova reinstalação apenas se uma causa de SO realmente exigir isso, com motivo registrado, mídia original e critérios próprios.
+5. **Fase final solicitada:** depois de fechar/encaminhar impedimentos persistentes e confirmar backup, realizar UMA instalação limpa oficial pelo pendrive, drivers escolhidos por hardware, validação de uso real. Isso não altera firmware persistente.
 
 ## Portas de saída
 - **Corrigido:** sintoma original não ocorre no teste reproduzível, estado antes/depois documentado.
