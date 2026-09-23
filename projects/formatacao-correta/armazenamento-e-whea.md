@@ -13,3 +13,6 @@
 O reboot do RST de 29/08 não é pendência atual: o controlador já consta iniciado com a versão Intel no teste posterior de 04/09. **Não reinstalar RST nem mudar modo SATA sem evidência nova.** Reabrir somente se surgirem WHEA ou sintomas atuais; o log 04/09 não prova ausência de defeito intermitente. O SSD não herda HKLM/HKCU por si próprio.
 
 [Funil](./triagem-causal-consolidada.md) · [Projeto](./README.md) · [Plano](./plano-corretivo.md) · [Tela azul](./memoria-e-tela-azul.md) · [Fontes](./fontes-e-lacunas.md).
+## Estado local atualizado pelo Codex em 23/09 ~17h30
+
+Controlador Intel SATA AHCI DEV_9D03 com servico **iaStorAC**, driver **17.8.1.1066** (oem54.inf), PnP sem codigo de erro. E uma versao distinta da 15.9.1.1018 usada no teste de 04/09; diferenca nao e falha em si. Nenhum WHEA, disk, storahci ou iaStorA retornou na consulta filtrada de 14 dias, mas o provedor iaStorAC nao foi consultado separadamente. Nao reinstalar RST nem substituir SSD sem evidencia nova. Fonte [EV-13](./registro-de-evidencias.md).
