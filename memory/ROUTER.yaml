@@ -1,0 +1,45 @@
+schema_version: 1
+default:
+  - projects/formatacao-correta/README.md
+  - projects/formatacao-correta/fontes-e-lacunas.md
+routes:
+  - id: firmware
+    keywords: [bios, uefi, firmware, csme, mei, manufacturing, bootguard, flash, chipset, me, microcode, secure boot]
+    files:
+      - projects/formatacao-correta/firmware-seguranca.md
+      - projects/formatacao-correta/correlacoes-windows-ubuntu.md
+  - id: power
+    keywords: [acpi, ec, energia, suspensao, energia da cpu, tpm, ptt, alimentacao, carregador]
+    files:
+      - projects/formatacao-correta/acpi-ec-energia-tpm.md
+      - projects/formatacao-correta/correlacoes-windows-ubuntu.md
+  - id: memory
+    keywords: [memtest, memoria, ram, tela azul, bsod, 0x1a, 0x41792, travamento]
+    files:
+      - projects/formatacao-correta/memoria-e-tela-azul.md
+      - context/lenovo-80yh-inventario-e-testes.md
+  - id: storage
+    keywords: [ssd, sata, storahci, iastora, rst, whea, smart, disco]
+    files:
+      - projects/formatacao-correta/armazenamento-e-whea.md
+      - projects/formatacao-correta/linha-do-tempo.md
+  - id: drivers
+    keywords: [driver, wifi, wi-fi, bluetooth, nvidia, gpu, intel 3165, optimus, rede]
+    files:
+      - projects/formatacao-correta/drivers-rede-e-gpu.md
+      - projects/formatacao-correta/correlacoes-windows-ubuntu.md
+  - id: windows
+    keywords: [windows, registro, hklm, hkcu, store, appx, dcom, update, permissao, servico]
+    files:
+      - projects/formatacao-correta/windows-servicos-registro.md
+      - projects/formatacao-correta/linha-do-tempo.md
+  - id: linux
+    keywords: [linux, ubuntu, fwts, chipsec, fwupd, hsi]
+    files:
+      - projects/formatacao-correta/correlacoes-windows-ubuntu.md
+      - projects/formatacao-correta/firmware-seguranca.md
+  - id: reinstall
+    keywords: [formatacao, formatar, reinstalar, pendrive, instalacao limpa, backup]
+    files:
+      - projects/formatacao-correta/execucao-em-tres-fases.md
+      - projects/formatacao-correta/prioridades-e-provas.md

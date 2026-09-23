@@ -1,0 +1,43 @@
+schema_version: 1
+project: formatacao-correta
+updated_at: "2026-09-23"
+goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final por pendrive, com validacao funcional."
+phase: preflight
+status: awaiting_user_result
+next_action:
+  id: memtest86-final
+  instruction: "Quando o MemTest86 terminar as quatro passagens, envie foto da tela final."
+  expected_evidence: "Imagem com resultado final e total de erros, sem dados pessoais."
+  why_now: "O teste ja esta em execucao; nao iniciar outro diagnostico."
+last_observation:
+  observed_at: "2026-09-23"
+  source: user_image
+  evidence_ref: EV-05
+  summary: "Passagem 1 terminada; passagem 2 em 75%; zero erros acumulados. Resultado 4/4 desconhecido."
+completed_checks:
+  - id: lenovo-usb-diagnostics
+    result: "Sem erros relatados pelo usuario."
+    observed_at: "2026-09-23"
+    source: user_report
+    evidence_ref: EV-06
+  - id: wd-smart-short
+    result: "Teste SMART curto sem erros relatados."
+    observed_at: "2026-09-23"
+    source: user_report
+    evidence_ref: EV-06
+open_cases:
+  - id: firmware-security
+    file: projects/formatacao-correta/firmware-seguranca.md
+    status: pending
+  - id: acpi-ec-power
+    file: projects/formatacao-correta/acpi-ec-energia-tpm.md
+    status: pending
+  - id: blue-screen
+    file: projects/formatacao-correta/memoria-e-tela-azul.md
+    status: pending
+  - id: sata-whea
+    file: projects/formatacao-correta/armazenamento-e-whea.md
+    status: historical
+  - id: windows-store-registry
+    file: projects/formatacao-correta/windows-servicos-registro.md
+    status: pending

@@ -6,7 +6,7 @@
 Uma base Markdown consultável, versionada, com links entre informações e instruções para o agente. **Não** há sincronização automática de conversas, embeddings, banco vetorial, agente local, monitoramento do Lenovo ou execução remota. A IA precisa efetivamente ler e escrever pelo GitHub em cada sessão relevante.
 
 ## Leitura obrigatória
-1. [README da raiz](../README.md) → [estado operacional](../projects/formatacao-correta/estado-atual.md).
+1. [README da raiz](../README.md) → [estado operacional](../memory/STATE.yaml).
 2. Ler [registro de evidências](../projects/formatacao-correta/registro-de-evidencias.md), [relações](../projects/formatacao-correta/mapa-de-relacoes.md) e somente a nota temática relacionada.
 3. Conferir datas: erro histórico não é erro atual. Comparar resultado novo ao antigo e registrar o que mudou.
 4. Escolher uma ação que muda a próxima decisão; só pedir teste extra quando a resposta determina correção distinta.
@@ -27,4 +27,4 @@ Nomear cada relação: `mesmo-subsistema`, `ocorreu-antes`, `corrobora`, `contra
 
 **Privacidade:** repositório público na consulta de 23/09. Não gravar dados pessoais, números de série, UUID, credenciais, imagens e logs brutos com identificadores.
 
-[Ingestão operacional](../runbooks/ingestao-de-resultados.md) · [Projeto](../projects/formatacao-correta/README.md).
+[Roteador](../memory/ROUTER.yaml) · [Schema](../memory/SCHEMA.yaml) · [Ingestão operacional](../runbooks/ingestao-de-resultados.md) · [Projeto](../projects/formatacao-correta/README.md).

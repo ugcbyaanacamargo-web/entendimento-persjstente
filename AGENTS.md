@@ -1,5 +1,11 @@
 # Instruções para agentes — entendimento persistente
 
+## Entrada obrigatória no motor
+1. Leia **[memory/STATE.yaml](./memory/STATE.yaml)** como única fonte do estado atual e da próxima ação. NÃO copie estado operacional para outros Markdown.
+2. Leia [memory/ROUTER.yaml](./memory/ROUTER.yaml) e abra somente os documentos que atendem à pergunta, além do índice e [fontes/lacunas](./projects/formatacao-correta/fontes-e-lacunas.md). Roteamento é interpretação do agente, não script que se executa sozinho.
+3. Todo resultado novo autorizado segue [ingestão](./runbooks/ingestao-de-resultados.md): evidência → relação → decisão → atualização do STATE → commit → verificação do validador.
+4. Veja [SCHEMA.yaml](./memory/SCHEMA.yaml), [índice do motor](./memory/INDEX.md) e [validador](./tools/validate_memory.py). GitHub Actions valida arquivos, **não** faz reparo do Lenovo.
+
 ## Ao iniciar tarefa complexa
 1. Leia [README.md](./README.md), [índice FORMATAÇÃO CORRETA](./projects/formatacao-correta/README.md) quando pertinente, e a nota temática.
 2. Identifique a data do achado, a fonte e se representa um **estado histórico**, **observação atual**, **hipótese**, **resultado resolvido** ou **pendência**.
@@ -9,7 +15,7 @@
 6. **META FINAL FORMATAÇÃO CORRETA: uma instalação limpa pelo pendrive depois de resolver/documentar impedimentos persistentes**, conforme [roteiro de três fases](./projects/formatacao-correta/execucao-em-tres-fases.md).
 
 ## Regras de memória obrigatórias
-- **Ler a cada tarefa complexa:** [protocolo](./context/protocolo-memoria-semantica.md), [estado atual](./projects/formatacao-correta/estado-atual.md), [provas](./projects/formatacao-correta/registro-de-evidencias.md) e [relações](./projects/formatacao-correta/mapa-de-relacoes.md), mais nota temática.
+- **Ler a cada tarefa complexa:** [protocolo](./context/protocolo-memoria-semantica.md), [estado atual](./memory/STATE.yaml), [provas](./projects/formatacao-correta/registro-de-evidencias.md) e [relações](./projects/formatacao-correta/mapa-de-relacoes.md), mais nota temática.
 - **Novo resultado:** aplicar [ingestão de informações](./runbooks/ingestao-de-resultados.md): fonte, data, deduplicação, tipo de relação, decisão, atualização GitHub e conferência do commit.
 - “Ativar memória” aqui significa seguir documentação e efetivamente usar o conector; não significa sincronização ou execução automática.
 

@@ -7,7 +7,7 @@
 
 ## Motor de leitura/ingestão
 
-- [Estado operacional e próxima ação](./estado-atual.md)
+- [Estado operacional e próxima ação](../../memory/STATE.yaml)
 - [Registro de provas e proveniência](./registro-de-evidencias.md)
 - [Mapa semântico entre problemas](./mapa-de-relacoes.md)
 - [Instruções para inserir novos resultados](../../runbooks/ingestao-de-resultados.md)
@@ -22,7 +22,7 @@
 ## Notas por assunto
 | Assunto | Nota | Estado |
 | --- | --- | --- |
-| **Estado operacional** | [estado-atual.md](./estado-atual.md) | Ação única, histórico e não repetição |
+| **Estado operacional** | [STATE.yaml](../../memory/STATE.yaml) | Fonte única da ação, histórico e não repetição |
 | **Registro de provas** | [registro-de-evidencias.md](./registro-de-evidencias.md) | Data, fonte e limite |
 | **Mapa semântico** | [mapa-de-relacoes.md](./mapa-de-relacoes.md) | Correlação Windows–Ubuntu sem causalidade inventada |
 | **Roteiro operacional para a instalação final** | [execucao-em-tres-fases.md](./execucao-em-tres-fases.md) | Ações limitadas para chegar à meta |

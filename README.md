@@ -14,9 +14,13 @@
 | Rascunhos | Hipóteses ainda não demonstradas | [scratchpad/README.md](./scratchpad/README.md) |
 | Procedimentos | Ações delimitadas e critérios de encerramento | [runbooks/README.md](./runbooks/README.md) |
 
+## Motor para ChatGPT Web
+
+**[STATE.yaml](./memory/STATE.yaml) é a única fonte operacional**, [ROUTER.yaml](./memory/ROUTER.yaml) escolhe as notas e [SCHEMA.yaml](./memory/SCHEMA.yaml) define os contratos. [Índice do motor](./memory/INDEX.md) · [Validação do GitHub](./.github/workflows/validate-memory.yml).
+
 ## Memória semântica em operação documental
 
-[Protocolo](./context/protocolo-memoria-semantica.md) · [Como inserir dados](./runbooks/ingestao-de-resultados.md) · [Estado e ação atual](./projects/formatacao-correta/estado-atual.md) · [Relações](./projects/formatacao-correta/mapa-de-relacoes.md) · [Registro de provas](./projects/formatacao-correta/registro-de-evidencias.md).
+[Protocolo](./context/protocolo-memoria-semantica.md) · [Como inserir dados](./runbooks/ingestao-de-resultados.md) · [Estado e ação atual](./memory/STATE.yaml) · [Relações](./projects/formatacao-correta/mapa-de-relacoes.md) · [Registro de provas](./projects/formatacao-correta/registro-de-evidencias.md).
 
 ## Memória já consolidada
 
