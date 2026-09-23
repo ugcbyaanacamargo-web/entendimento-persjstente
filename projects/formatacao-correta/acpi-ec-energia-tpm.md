@@ -27,3 +27,7 @@ Confirmar sintomas concretos (transição suspensão/retorno, energia AC, Event 
 O teste de 04/09 nao reproduziu Event 37, mas a consulta posterior encontrou **19 novos eventos entre 11 e 23/09**, quatro em 23/09, ultimo ~16h40. Um registro informa processador logico 3 limitado durante 71 segundos. Nenhum ACPI 13/15 apareceu na mesma janela filtrada. Event 37 e uma limitacao de frequencia comandada pela plataforma; temperatura, alimentacao e causa concreta nao foram determinadas. Nao vincular automaticamente ao BSOD.
 
 [Registro EV-12](./registro-de-evidencias.md) · [Funil](./triagem-causal-consolidada.md).
+
+## Limite para a proxima correcao
+
+A auditoria anterior do Event37 incluiu `CapDurationInSeconds=71`, `PpcChanges=0`, `TpcChanges=0` e `PccChanges=1` conforme transcricao de conversa. O numero 71 reaparece em 23/09 em boots distintos. Isto NAO distingue automaticamente temperatura, carregador, EC, bateria ou BIOS como causa e NAO justifica alterar PL1/PL2, BD PROCHOT, IccMax ou BIOS. Usuario utiliza AC/tomada; tratar bateria apenas se uma medicao estabelecer nexo com a falha.
