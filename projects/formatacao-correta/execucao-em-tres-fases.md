@@ -4,13 +4,14 @@
 **Antes de cada ação:** abrir [estado atual](../../memory/STATE.yaml) e [evidências](./registro-de-evidencias.md); registrar mudanças pelo [procedimento](../../runbooks/ingestao-de-resultados.md).
 
 ## 1 — Fechar o que já foi investigado (sem auditoria geral)
-- Receber só a foto do **resultado FINAL** do MemTest86 em execução; última foto disponível: 2/4, 75% da segunda, 0 erros. Não repetir o teste.
+- **Concluído:** MemTest86 v11.7 Free final **PASS relatado pelo usuário** em 23/09; contagem final numérica não transcrita. Não exigir foto/celular nem repetir teste.
 - Diagnóstico Lenovo por pendrive e SMART curto WD Green: usuário já informou que passaram. Não repetir.
+- **Concluídos:** teste SATA/PHY e stress CPU/energia de 04/09 sem novos eventos-alvo durante as janelas examinadas. Não propor “reinicializar para finalizar RST” como se 29/08 ainda fosse hoje. [Resultados](./testes-04-09-resultados.md).
 - Usar dados existentes: Ubuntu (FWTS/CHIPSEC/fwupd resumidos pelo usuário), Windows 10 (ACPI/EC, CPU limitada, WHEA/SATA, WinDbg, serviços, Store, drivers); Windows 11 (falhas relatadas, logs primários não recuperados).
 - Um dado adicional SOMENTE se decidir uma ação específica: exemplo estado atual do controlador SATA se novo WHEA ocorrer. O relatório de 29/08 com reinicialização pendente não é o estado atual.
 - Registrar cada ocorrência como: corrigir / deixar para pós-instalação / limitação da plataforma / encaminhar fabricante.
 
-**Saída:** uma decisão por caso na [matriz de provas](./prioridades-e-provas.md), não uma lista interminável de suspeitos.
+**Saída:** uma decisão por caso no [funil causal](./triagem-causal-consolidada.md) e na [matriz de provas](./prioridades-e-provas.md), não uma lista interminável de suspeitos.
 
 ## 2 — Resolver o que sobreviveria à formatação
 - Segurança firmware: manufacturing mode e acesso flash relatados pelo Ubuntu exigem **referência e procedimento compatíveis com Lenovo NM-B242**, não F9/Secure Erase. BootGuard pode ser decidido em fabricação; não prometer habilitar recurso ausente nem mexer em fuses.
