@@ -46,6 +46,8 @@
 
 | EV-36 | Desktop Commander, testes de integridade local e configuração 23/09 ~22h36–22h43 | `sfc /verifyfile` de `combase.dll` e `ScreenClipping.dll` ambos retornaram EXIT 0 e "nenhuma violação de integridade"; assinaturas Authenticode Microsoft válidas de `ScreenClippingHost.exe`, `ScreenClipping.dll` e `combase.dll`. Powercfg: plano Equilibrado, notebook em AC; parâmetros AHCI LPM/Adaptive não expostos no `powercfg /query` atual, com iaStorAC ativo. `HKU`, HKLM/Software/Classes, HKCU/Software/Classes, `ms-screenclip` e ActivatableClasses com ALL APPLICATION PACKAGES ReadKey; registro ms-screenclip e manifesto CBS ScreenClipping presentes. | Não usar hipótese de DLL corrompida, assinatura inválida, ausência genérica de ACL ou protocolo ausente sem novos dados. Não concluir que RST usa ou não HIPM/DIPM só pela ausência das opções do plano; CBS contém TextInputHost, reset indiscriminado pode afetar entrada de texto. |
 
+| EV-37 | Desktop Commander ultimo confronto 23/09 ~22h44 | Desde o Evento129 de 21h46 nao apareceu novo armazenamento ID129/153/154/7/11/51 no filtro; AppXSvc permanece Running/Manual após Start-Service anterior; nenhum novo WER bugcheck/Kernel-Power no filtro desde 22h. ScreenClippingHost **continua falhando: 2 novos Event1000 apos 22h35**. Verifier flags 0. | Validacao de janela CURTA, nao declarar SATA/BSOD curados nem ScreenClipping resolvido; o app segue com falha atual apesar da integridade de DLLs e ACLs conferidas. |
+
 **Ingestão:** usar [procedimento](../../runbooks/ingestao-de-resultados.md), preservar observações antigas, acrescentar nova evidência sem dados privados, atualizar [estado](../../memory/STATE.yaml).
 
 [Projeto](./README.md) · [Fontes e lacunas](./fontes-e-lacunas.md).
