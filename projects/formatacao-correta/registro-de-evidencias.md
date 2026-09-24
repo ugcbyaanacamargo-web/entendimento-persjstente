@@ -33,6 +33,8 @@
 
 | EV-28 | Desktop Commander 23/09 ~21h15, tentativa dirigida a user-mode minidump de ScreenClippingHost | Configuração WER LocalDumps **somente para ScreenClippingHost.exe** ativada temporariamente com mini dump, `ms-screenclip:` disparou Event1000 novamente às 21h15; não houve mini dump local listado; configuração temporária foi removida no bloco finally | Não repetir produção de falhas sem plano de coleta melhor; NÃO foi BSOD, não foi ativado Driver Verifier, não foi feito reset de perfil/Registro global |
 
+| EV-29 | Desktop Commander, WER user-mode dump e WinDbgX instalado, 23/09 ~21h17–21h19 | Minidump do aplicativo `ScreenClippingHost.exe.4904.dmp` de 4.790.794 bytes **apareceu após finalização da gravação**. Log WinDbgX privado `SCREENCLIP_WINDBG_20260923.log`: `STOWED_EXCEPTION_c000027b_combase.dll`, `ScreenClipping!StartApplication+0x23ed9`, `combase!RoFailFastWithErrorContextInternal2`, HRESULT **0x80270301** na pilha. O código corresponde a `E_SHELL_EXTENSION_BLOCKED`; SearchApp anterior relatou mesmo HRESULT | Corrige EV-28: ausência TEMPORÁRIA no primeiro inventário não significou falha de coleta. Há bloqueio relatado no contexto Shell, mas o componente específico/origem do bloqueio NÃO foi determinado. Não publicar dump ou log integral (podem conter dados pessoais) |
+
 **Ingestão:** usar [procedimento](../../runbooks/ingestao-de-resultados.md), preservar observações antigas, acrescentar nova evidência sem dados privados, atualizar [estado](../../memory/STATE.yaml).
 
 [Projeto](./README.md) · [Fontes e lacunas](./fontes-e-lacunas.md).
