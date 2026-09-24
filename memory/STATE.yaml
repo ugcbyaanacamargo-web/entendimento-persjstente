@@ -12,8 +12,8 @@ next_action:
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-31
-  summary: "iaStorAC 17.8.1.1066: Event129 SATA reset 21h46:19; AppXSvc 7000/7009 21h46:20. AppXSvc iniciou com sucesso 22h19. SMART IDs5/187/188/199 zeros; ReadLatencyMax 64138ms WriteLatencyMax 64059ms; 174 passou 7→8 apos 04/09. ScreenClipping segue falhando, nao atribuir a evento de storage, que ocorreu depois da falha original do aplicativo."
+  evidence_ref: EV-37
+  summary: "Desktop Commander 22h44: AppXSvc continua Running, nenhum novo 129/7000/7009 desde 21h46, nenhuma nova BSOD na janela; ScreenClipping teve 2 novas quedas Event1000 apos 22h35. SFC verifyfile e assinaturas Microsoft de combase/ScreenClipping validas; ACL All App Packages presentes nos caminhos examinados, registro ms-screenclip OK. SATA 129 e maxima latencia >64s seguem abertos, sem mudança de driver de boot."
 
 completed_checks:
   - id: remove-intel-cip-queencreek
