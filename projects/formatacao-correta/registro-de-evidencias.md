@@ -48,6 +48,8 @@
 
 | EV-37 | Desktop Commander ultimo confronto 23/09 ~22h44 | Desde o Evento129 de 21h46 nao apareceu novo armazenamento ID129/153/154/7/11/51 no filtro; AppXSvc permanece Running/Manual após Start-Service anterior; nenhum novo WER bugcheck/Kernel-Power no filtro desde 22h. ScreenClippingHost **continua falhando: 2 novos Event1000 apos 22h35**. Verifier flags 0. | Validacao de janela CURTA, nao declarar SATA/BSOD curados nem ScreenClipping resolvido; o app segue com falha atual apesar da integridade de DLLs e ACLs conferidas. |
 
+| EV-38 | Desktop Commander, inventário PawnIO opcional 23/09 ~22h46 | `ROOT\\PAWNIO\\0000` Status OK, `oem19.inf` 2.2.0.0, fabricante namazso, serviço kernel Manual/Running, driver no DriverStore com assinatura `Microsoft Windows Hardware Compatibility Publisher` válida; HWiNFO64 e PawnIO instalados, sem processo visível HWiNFO/FanControl/LibreHardwareMonitor/OpenRGB no instante | Driver de acesso de baixo nível, nao atribuível à tela azul sem vínculo do dump. NÃO foi desabilitado/retirado; remoção pode prejudicar sensores de aplicações que o reutilizam. |
+
 **Ingestão:** usar [procedimento](../../runbooks/ingestao-de-resultados.md), preservar observações antigas, acrescentar nova evidência sem dados privados, atualizar [estado](../../memory/STATE.yaml).
 
 [Projeto](./README.md) · [Fontes e lacunas](./fontes-e-lacunas.md).
