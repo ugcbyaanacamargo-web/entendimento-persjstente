@@ -50,6 +50,8 @@
 
 | EV-38 | Desktop Commander, inventário PawnIO opcional 23/09 ~22h46 | `ROOT\\PAWNIO\\0000` Status OK, `oem19.inf` 2.2.0.0, fabricante namazso, serviço kernel Manual/Running, driver no DriverStore com assinatura `Microsoft Windows Hardware Compatibility Publisher` válida; HWiNFO64 e PawnIO instalados, sem processo visível HWiNFO/FanControl/LibreHardwareMonitor/OpenRGB no instante | Driver de acesso de baixo nível, nao atribuível à tela azul sem vínculo do dump. NÃO foi desabilitado/retirado; remoção pode prejudicar sensores de aplicações que o reutilizam. |
 
+| EV-39 | Desktop Commander em 23/09 ~22h48–22h49, teste único de atualização de associações Shell | Após re-registro CBS anterior, chamada documentada `SHChangeNotify(SHCNE_ASSOCCHANGED,SHCNF_FLUSH)` foi executada sem alterações em Registro/serviços; ativação `ms-screenclip:` no mesmo teste gerou **novo Event1000 ScreenClippingHost às 22h48:54**. `PrintScreenKeyForSnippingEnabled=0` preservado | Atualização da cache/associações Shell **NÃO corrigiu** a captura. Não repetir o mesmo teste nem anunciar captura reparada; manter `0x80270301` aberto e exigir identificação concreta da extensão COM ou registro específico antes de outra correção |
+
 **Ingestão:** usar [procedimento](../../runbooks/ingestao-de-resultados.md), preservar observações antigas, acrescentar nova evidência sem dados privados, atualizar [estado](../../memory/STATE.yaml).
 
 [Projeto](./README.md) · [Fontes e lacunas](./fontes-e-lacunas.md).
