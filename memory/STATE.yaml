@@ -5,15 +5,15 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: fix-reproducible-screenclippinghost-event1000
-  instruction: "Agente: tratar 1 por 1 os erros/avisos recentes com Desktop Commander. Primeiro ScreenClippingHost Application1000 0xc000027b reproduzido 21h09 e 21h11; re-registro individual CBS ja feito e NAO resolveu. Correlacionar SearchApp 19h17 que tem mesmo codigo WER 80270301; identificar componente/procedimento focal e testar mesma acao. NAO repetir teste de BSOD nem exigir HD externo para reparos reversiveis."
-  expected_evidence: "Erro e condicao de ativacao precisos; correcao unica com backup minimo quando necessario; repetir ms-screenclip e confirmar log + funcao. Se nao corrigido, registrar falha e nao chamar resolvido."
-  why_now: "Usuario recusou caminho de Driver Verifier/HD externo para analisar erros aplicativos; falha atual Event1000 foi reproduzida e primeira correcao de registro do pacote CBS nao resolveu."
+  id: identify-shared-shell-extension-blocked-cause
+  instruction: "Agente: prosseguir caso reproduzido ScreenClippingHost, sem repetir re-registro CBS, sem induzir nova tela azul e sem HD externo. WinDbg do dump USER-MODE ja confirmou 0x80270301/E_SHELL_EXTENSION_BLOCKED no fail-fast ScreenClipping; SearchApp teve mesmo HRESULT. Buscar identificacao concreta de extensao/COM/politica ou perfil que bloqueia ativacao, usando evidencias de eventos e diagnosticos LOCAIS direcionados. So propor correcao reversivel de ITEM ESPECIFICO se houver correspondencia. Respeitar PrtSc classico=0."
+  expected_evidence: "Elemento de Shell ou condicao de usuario identificada, correcao delimitada e teste ms-screenclip + comparacao do Event1000. Se nao for tecnicamente identificavel neste ambiente, manter ABERTO sem fingir cura nem resetar todos os AppX/ACLs."
+  why_now: "ScreenClippingHost reproduziu multiplos crashes; re-registro CBS foi bem sucedido mas nao corrigiu. Dump local APP foi encontrado e WinDbg evidenciou HRESULT 0x80270301 no caminho combase/ScreenClipping."
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-27
-  summary: "ScreenClippingHost falhou com 0xc000027b em eventos repetidos; ativacao ms-screenclip reproduziu Event1000. Re-registro individual CBS com ForceTargetApplicationShutdown sucesso, mas novo Event1000 no reteste 21h11. SearchApp teve 0xc000027b e WER P8 80270301. Nada de BSOD induzido, nenhum Driver Verifier."
+  evidence_ref: EV-29
+  summary: "Tela de captura 0xc000027b voltou nos testes 21h09/21h11/21h15; WinDbgX local de minidump USER-MODE revelou combase RoFailFast, ScreenClipping StartApplication e HRESULT 0x80270301 E_SHELL_EXTENSION_BLOCKED. SearchApp 19h17 relatou igual HRESULT. Registracao de CBS nao resolveu; preferencia de PrtSc classico mantida. Nenhum BSOD induzido."
 
 completed_checks:
   - id: remove-intel-cip-queencreek
