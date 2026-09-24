@@ -23,6 +23,9 @@
 
 - Ponto de restauração existente e Windows RE marcado Enabled. C: sem criptografia ativa. **Nenhuma unidade externa de backup apareceu conectada**; nenhum teste de boot por WinRE ou imagem externa foi feito.
 - Antes de Driver Verifier/instalação final: usuário conectar armazenamento externo e confirmar espaço, autorizar backup/imagem testável, definir retorno ao Windows. Para firmware, só procedimento OEM/técnico com baseline de revisão e preservação de dados exclusivos.
-- **Próximo passo único** em [STATE.yaml](../../memory/STATE.yaml): obter mídia externa de backup. NÃO apagar/formartar unidade sem consentimento específico.
+- **A condição de backup externo aplica-se SOMENTE a Driver Verifier, firmware ou instalação destrutiva, não bloqueia a correção cotidiana de aplicativos.** A fila operacional atual está em [STATE.yaml](../../memory/STATE.yaml): ScreenClippingHost Event1000 atual, reproduzido e documentado; não exigir HD para re-registro ou diagnóstico do Shell.
 
 [Confronto global](./confronto-global-23-09.md) · [Firm. segurança](./firmware-seguranca.md) · [BSOD](./memoria-e-tela-azul.md) · [Evidências EV-21..25](./registro-de-evidencias.md).
+## Adendo após a imagem do Event Viewer — 23/09 ~21h05 a 21h22
+
+[EV-27–30](./registro-de-evidencias.md): captura falha de forma reproduzível; re-registro individual `MicrosoftWindows.Client.CBS` SUCESSO, mas teste continuou falhando. Dump completo SOMENTE de ScreenClippingHost (privado, local) confirmou `STOWED_EXCEPTION_80270301` / `E_SHELL_EXTENSION_BLOCKED`; `SearchApp` apresentou mesmo HRESULT, sem extensão exata identificada. O caso captura fica ABERTO, não repetir testes sem hipótese nova. O print do usuário mostrava 3.752 eventos administrativos acumulados, não 3.752 defeitos contemporâneos independentes. [Trilha Windows](./windows-servicos-registro.md) · [STATE](../../memory/STATE.yaml).
