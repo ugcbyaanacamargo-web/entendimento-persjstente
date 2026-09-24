@@ -12,8 +12,8 @@ next_action:
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-37
-  summary: "Desktop Commander 22h44: AppXSvc continua Running, nenhum novo 129/7000/7009 desde 21h46, nenhuma nova BSOD na janela; ScreenClipping teve 2 novas quedas Event1000 apos 22h35. SFC verifyfile e assinaturas Microsoft de combase/ScreenClipping validas; ACL All App Packages presentes nos caminhos examinados, registro ms-screenclip OK. SATA 129 e maxima latencia >64s seguem abertos, sem mudança de driver de boot."
+  evidence_ref: EV-39
+  summary: "AppXSvc iniciou e manteve Running na ultima janela, nenhum novo SATA129 apos 21h46. Tela de captura segue falhando: SFC e assinaturas combase/ScreenClipping validas, ACL All App Packages presente, re-registro CBS anterior e notificacao Shell SHCNE_ASSOCCHANGED em 22h48 NAO resolveram, novo Event1000 22h48:54. PawnIO 2.2 driver assinado ativo e nao alterado; BSOD autor ainda nao identificado. Firmware de seguranca nao modificado."
 
 completed_checks:
   - id: remove-intel-cip-queencreek
