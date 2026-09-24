@@ -1,6 +1,6 @@
 schema_version: 1
 project: formatacao-correta
-updated_at: "2026-09-23"
+updated_at: "2026-09-24"
 goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final por pendrive, com validacao funcional."
 phase: preflight
 status: in_progress
@@ -10,12 +10,17 @@ next_action:
   expected_evidence: "Tabela de casos por causa observada + alteracao efetiva + teste independente; casos nao corrigidos ficam ABERTOS. Event129 e latencia maxima sao dados novos que mudam foco; confirmar o intervalo de comparacao de drivers e referencia OEM 80YH antes de alterar armazenamento."
   why_now: "Usuario pediu investigacao global e solucao efetiva, nao explicacoes repetidas. Desktop Commander identificou NOVO Event129 de iaStorAC com timeout AppXSvc no mesmo minuto e Read/WriteLatencyMax >64s, embora WHEA recente ausente e SMART IDs 5/199 zero. AppXSvc iniciou apos incidente; ScreenClipping continua reproduzivel."
 last_observation:
-  observed_at: "2026-09-23"
+  observed_at: "2026-09-24"
   source: raw_log
-  evidence_ref: EV-39
-  summary: "AppXSvc iniciou e manteve Running na ultima janela, nenhum novo SATA129 apos 21h46. Tela de captura segue falhando: SFC e assinaturas combase/ScreenClipping validas, ACL All App Packages presente, re-registro CBS anterior e notificacao Shell SHCNE_ASSOCCHANGED em 22h48 NAO resolveram, novo Event1000 22h48:54. PawnIO 2.2 driver assinado ativo e nao alterado; BSOD autor ainda nao identificado. Firmware de seguranca nao modificado."
+  evidence_ref: EV-40
+  summary: "Novo iaStorAC129 de 23/09 21h46 confirmado; sem repeticao na janela ate 24/09 00h45. ACL raiz C: Authenticated Users FullControl herdavel, risco de gravacao indevida; 4 servicos SYSTEM ImagePath sem aspas CORRIGIDOS com registro antigo em backup local, configuracoes verificadas sem reboot. ACL raiz nao alterada. Captura continua falhando, BSOD autor nao identificado. Firmware nao modificado."
 
 completed_checks:
+  - id: quote-four-system-services
+    result: "ImagePath com aspas para Odoo19, Codex Sandbox, PC Manager Store e WslInstaller (todos LocalSystem); paths continuam apontando arquivos existentes, servicos mantiveram estados Running/Stopped, backups locais; no reboot. ACL raiz C: Authenticated Users FullControl herdavel permanece pendente de backup externo."
+    observed_at: "2026-09-24"
+    source: raw_log
+    evidence_ref: EV-40
   - id: remove-intel-cip-queencreek
     result: "Remocao oficial de Intel Computing Improvement Program MSI e bundle; zero entradas remanescentes, zero servicos/processos QUEENCREEK e driver semav6msr64 ausente. Restore point criado; nenhum reboot ou Driver Verifier."
     observed_at: "2026-09-23"
@@ -65,3 +70,6 @@ open_cases:
   - id: bluetooth-wlan
     file: projects/formatacao-correta/drivers-rede-e-gpu.md
     status: pending
+  - id: root-acl-security
+    file: projects/formatacao-correta/windows-servicos-registro.md
+    status: in_progress
