@@ -5,15 +5,15 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: identify-shared-shell-extension-blocked-cause
-  instruction: "Agente: prosseguir caso reproduzido ScreenClippingHost, sem repetir re-registro CBS, sem induzir nova tela azul e sem HD externo. WinDbg do dump USER-MODE ja confirmou 0x80270301/E_SHELL_EXTENSION_BLOCKED no fail-fast ScreenClipping; SearchApp teve mesmo HRESULT. Buscar identificacao concreta de extensao/COM/politica ou perfil que bloqueia ativacao, usando evidencias de eventos e diagnosticos LOCAIS direcionados. So propor correcao reversivel de ITEM ESPECIFICO se houver correspondencia. Respeitar PrtSc classico=0."
-  expected_evidence: "Elemento de Shell ou condicao de usuario identificada, correcao delimitada e teste ms-screenclip + comparacao do Event1000. Caso NENHUMA extensao especifica seja isolada, manter caso ABERTO e nao repetir producao de crashes, resetar AppX inteiro nem exigir HD externo para reparos reversiveis."
-  why_now: "ScreenClippingHost reproduziu multiplos crashes; re-registro CBS foi bem sucedido mas nao corrigiu. Dump local APP foi encontrado e WinDbg evidenciou HRESULT 0x80270301 no caminho combase/ScreenClipping."
+  id: global-concurrent-safe-remediation-not-bsod-stress
+  instruction: "Agente: executar progresso seguro em TODOS os casos COM PROVA atual: (a) SATA Event129 iaStorAC 21h46 e latencia maxima ~64s; (b) ScreenClippingHost/SearchApp HRESULT80270301; (c) Bluetooth BTHUSB17 e Event37; (d) PC Manager AppModel-State e Store somente se recorrentes; (e) firmware ME/BootGuard apenas mediante referencia OEM. Usar logs originais e pesquisa oficial por dispositivo exato. Mudancas somente focais e reversiveis, testar sintoma correspondente e registrar estado. NAO solicitar HD externo como pre-condicao de diagnostico nao destrutivo, nao induzir BSOD, nao repetir MemTest/WinDbg. Nao trocar driver SATA de inicializacao, limpar TPM, apagar SSD ou gravar firmware sem salvaguardas e autorizacao especifica."
+  expected_evidence: "Tabela de casos por causa observada + alteracao efetiva + teste independente; casos nao corrigidos ficam ABERTOS. Event129 e latencia maxima sao dados novos que mudam foco; confirmar o intervalo de comparacao de drivers e referencia OEM 80YH antes de alterar armazenamento."
+  why_now: "Usuario pediu investigacao global e solucao efetiva, nao explicacoes repetidas. Desktop Commander identificou NOVO Event129 de iaStorAC com timeout AppXSvc no mesmo minuto e Read/WriteLatencyMax >64s, embora WHEA recente ausente e SMART IDs 5/199 zero. AppXSvc iniciou apos incidente; ScreenClipping continua reproduzivel."
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-30
-  summary: "Full dump PRIVADO somente de ScreenClippingHost analisado com WinDbgX: STOWED_EXCEPTION_80270301, vccorlib140_app/ScreenClipping/COM. Qual extensao/condicao bloqueou ainda nao identificada; re-registro CBS falhou no teste. WER LocalDumps temporario removido, nenhum Driver Verifier/BSOD induzido. Queencreek sem 7034 no intervalo apos retirada."
+  evidence_ref: EV-31
+  summary: "iaStorAC 17.8.1.1066: Event129 SATA reset 21h46:19; AppXSvc 7000/7009 21h46:20. AppXSvc iniciou com sucesso 22h19. SMART IDs5/187/188/199 zeros; ReadLatencyMax 64138ms WriteLatencyMax 64059ms; 174 passou 7→8 apos 04/09. ScreenClipping segue falhando, nao atribuir a evento de storage, que ocorreu depois da falha original do aplicativo."
 
 completed_checks:
   - id: remove-intel-cip-queencreek
@@ -58,10 +58,10 @@ open_cases:
     status: in_progress
   - id: sata-whea
     file: projects/formatacao-correta/armazenamento-e-whea.md
-    status: historical
+    status: in_progress
   - id: windows-store-registry
     file: projects/formatacao-correta/windows-servicos-registro.md
-    status: pending
+    status: in_progress
   - id: bluetooth-wlan
     file: projects/formatacao-correta/drivers-rede-e-gpu.md
     status: pending
