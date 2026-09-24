@@ -5,15 +5,15 @@ goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final 
 phase: preflight
 status: in_progress
 next_action:
-  id: obtain-verified-external-backup-before-risky-diagnostics
-  instruction: "Usuario: conectar unidade externa com espaco suficiente para backup verificado. Agente, quando presente: identificar disco externo SEM apagar ou formatar, preparar imagem recuperavel e preservar dumps antes de propor Driver Verifier seletivo. Nao fazer firmware, Secure Erase, reset TPM ou instalacao final automaticamente. Outros casos continuam distintos."
-  expected_evidence: "Unidade fisica externa confirmada, backup de dados e imagem valida com retorno pratico, plano de recuperacao de boot, autorizacao especifica antes de teste disruptivo; se nao houver unidade, registrar bloqueio."
-  why_now: "Desktop Commander 23/09 confirmou nenhum volume externo conectado, WinRE somente habilitado e nenhum backup externo; tela azul sem autor e firmware Intel ME sem medicao atual. Outras ocorrencias AppX ja atualizaram e driver Intel 3165 ja esta em ultima versao oficial."
+  id: fix-reproducible-screenclippinghost-event1000
+  instruction: "Agente: tratar 1 por 1 os erros/avisos recentes com Desktop Commander. Primeiro ScreenClippingHost Application1000 0xc000027b reproduzido 21h09 e 21h11; re-registro individual CBS ja feito e NAO resolveu. Correlacionar SearchApp 19h17 que tem mesmo codigo WER 80270301; identificar componente/procedimento focal e testar mesma acao. NAO repetir teste de BSOD nem exigir HD externo para reparos reversiveis."
+  expected_evidence: "Erro e condicao de ativacao precisos; correcao unica com backup minimo quando necessario; repetir ms-screenclip e confirmar log + funcao. Se nao corrigido, registrar falha e nao chamar resolvido."
+  why_now: "Usuario recusou caminho de Driver Verifier/HD externo para analisar erros aplicativos; falha atual Event1000 foi reproduzida e primeira correcao de registro do pacote CBS nao resolveu."
 last_observation:
   observed_at: "2026-09-23"
   source: raw_log
-  evidence_ref: EV-24
-  summary: "Desktop Commander: PC Manager e Codex atualizados e Status Ok, PowerShell 7.6 abre; Bluetooth BTHUSB17 cinco vezes ate 20/09, Wi-Fi 5007 ultimo 05/09, ambos usando as ultimas versoes Intel 3165; 0 erros PnP e nenhum WHEA novo no filtro. Nenhum disco externo disponivel. CIP removido; causas BSOD/firmware ainda abertas."
+  evidence_ref: EV-27
+  summary: "ScreenClippingHost falhou com 0xc000027b em eventos repetidos; ativacao ms-screenclip reproduziu Event1000. Re-registro individual CBS com ForceTargetApplicationShutdown sucesso, mas novo Event1000 no reteste 21h11. SearchApp teve 0xc000027b e WER P8 80270301. Nada de BSOD induzido, nenhum Driver Verifier."
 
 completed_checks:
   - id: remove-intel-cip-queencreek
