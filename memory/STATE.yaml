@@ -1,6 +1,6 @@
 schema_version: 1
 project: formatacao-correta
-updated_at: "2026-09-24"
+updated_at: "2026-09-25"
 goal: "Corrigir impedimentos persistentes e realizar uma instalacao limpa final por pendrive, com validacao funcional."
 phase: preflight
 status: in_progress
@@ -10,12 +10,17 @@ next_action:
   expected_evidence: "Tabela de casos por causa observada + alteracao efetiva + teste independente; casos nao corrigidos ficam ABERTOS. Event129 e latencia maxima sao dados novos que mudam foco; confirmar o intervalo de comparacao de drivers e referencia OEM 80YH antes de alterar armazenamento."
   why_now: "Usuario pediu investigacao global e solucao efetiva, nao explicacoes repetidas. Desktop Commander identificou NOVO Event129 de iaStorAC com timeout AppXSvc no mesmo minuto e Read/WriteLatencyMax >64s, embora WHEA recente ausente e SMART IDs 5/199 zero. AppXSvc iniciou apos incidente; ScreenClipping continua reproduzivel."
 last_observation:
-  observed_at: "2026-09-24"
+  observed_at: "2026-09-25"
   source: raw_log
-  evidence_ref: EV-40
-  summary: "Novo iaStorAC129 de 23/09 21h46 confirmado; sem repeticao na janela ate 24/09 00h45. ACL raiz C: Authenticated Users FullControl herdavel, risco de gravacao indevida; 4 servicos SYSTEM ImagePath sem aspas CORRIGIDOS com registro antigo em backup local, configuracoes verificadas sem reboot. ACL raiz nao alterada. Captura continua falhando, BSOD autor nao identificado. Firmware nao modificado."
+  evidence_ref: EV-41
+  summary: "Sem novos eventos SATA129, BSOD, Event37 ou timeout de AppXSvc na consulta de System de 24/09 00h a 25/09 18h32; apenas WD Green interno detectado, backup externo pendente. ACL raiz C: Authenticated Users FullControl herdavel ainda presente. Update Codex 26.917.9434.0 em 24/09 reescreveu ImagePath SYSTEM sem aspas; correcao local com backup em 25/09 18h33, servico Running. Outros 3 ImagePath mantiveram aspas. Captura/BSOD/firmware sem correcao comprovada."
 
 completed_checks:
+  - id: requote-codex-after-appx-update
+    result: "Appx Codex 26.917.9434.0 regravou ImagePath de SYSTEM sem aspas; em 25/09 18h33 correcao reaplicada para nova versao, backup .reg local, servico segue Running; verificar novamente apos cada update."
+    observed_at: "2026-09-25"
+    source: raw_log
+    evidence_ref: EV-41
   - id: quote-four-system-services
     result: "ImagePath com aspas para Odoo19, Codex Sandbox, PC Manager Store e WslInstaller (todos LocalSystem); paths continuam apontando arquivos existentes, servicos mantiveram estados Running/Stopped, backups locais; no reboot. ACL raiz C: Authenticated Users FullControl herdavel permanece pendente de backup externo."
     observed_at: "2026-09-24"
